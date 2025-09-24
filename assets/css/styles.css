@@ -794,8 +794,8 @@ footer.entry-meta .meta-in {
 @media (min-width: 1200px) {
   /* Reduce gaps from the edges for all pages */
   .container {
-  padding-left: 5px !important;
-  padding-right: 5px !important;
+  padding-left: 7px !important;
+  padding-right: 7px !important;
   margin-left: 0 !important;
   margin-right: 0 !important;
   width: 100% !important;
