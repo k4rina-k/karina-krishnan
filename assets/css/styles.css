@@ -794,7 +794,7 @@ footer.entry-meta .meta-in {
 @media (min-width: 1200px) {
   .container {
     max-width: 1080px;
-  }
+  } }
 
   /* Photo Gallery Styles */
 .photo-gallery {
@@ -837,5 +837,4 @@ footer.entry-meta .meta-in {
 
 .gallery-item:hover .desc {
   opacity: 1;
-}
 }
