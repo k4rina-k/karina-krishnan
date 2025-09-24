@@ -791,11 +791,11 @@ footer.entry-meta .meta-in {
 }
 /* Max page width
 /////////////////////////////////////////////////////////////////////*/
-@media (min-width: 1200px) {
+@media (min-width: 1200px) 
   /* Reduce gaps from the edges for all pages */
   .container {
-  padding-left: 5px !important;
-  padding-right: 5px !important;
+  padding-left: 7px !important;
+  padding-right: 7px !important;
   margin-left: 0 !important;
   margin-right: 0 !important;
   width: 100% !important;
@@ -815,7 +815,7 @@ footer.entry-meta .meta-in {
 
 .gallery-item {
   flex: 1 0 0;
-  min-width: 0;
+  min-width: 150px;
   position: relative;
   overflow: hidden;
   border-radius: 0;
@@ -850,4 +850,8 @@ footer.entry-meta .meta-in {
 
 .gallery-item:hover .desc {
   opacity: 1;
+}
+
+body {
+  overflow-x: hidden;
 }
