@@ -796,34 +796,31 @@ footer.entry-meta .meta-in {
     max-width: 1080px;
   } }
 
-  /* Photo Gallery Styles */
+/* Photo Gallery Styles */
 .photo-gallery {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;      /* Center the gallery */
-  align-items: stretch;
-  width: 100vw;                 /* Full viewport width */
-  margin-left: calc(-50vw + 50%); /* Remove container padding if inside a centered container */
-  margin-right: calc(-50vw + 50%);
-  gap: 0;                       /* Remove gaps between images */
-  background: #fff;
+  width: 100vw;
+  margin: 0;
   padding: 0;
+  gap: 0;
+  background: #fff;
 }
 
 .gallery-item {
-  flex: 1 1 0;                  /* Allow items to grow and shrink */
-  min-width: 300px;             /* Minimum width for each image */
-  max-width: 100vw;
+  flex: 1 0 0;
+  min-width: 0;
   position: relative;
   overflow: hidden;
   border-radius: 0;
   box-shadow: none;
+  aspect-ratio: 4/3; /* Keeps all images the same height, adjust as needed */
 }
 
 .gallery-item img {
   width: 100%;
   height: 100%;
-  object-fit: cover;            /* Fill the area, cropping if needed */
+  object-fit: cover;
   display: block;
   transition: transform 0.3s;
 }
