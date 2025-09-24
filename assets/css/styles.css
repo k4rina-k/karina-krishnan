@@ -806,7 +806,7 @@ footer.entry-meta .meta-in {
 
 .gallery-item {
   position: relative;
-  width: 200px;
+  width: 350px;  /* Make this larger or smaller */
   overflow: hidden;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
