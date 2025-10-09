@@ -225,7 +225,7 @@ a:hover {
 
 **********************************************************************/
 #head {
-  background: #f4f4f4 url(../images/me.jpeg) top center !important;
+  background: #f4f4f4 url(../images/me.jpeg) bottom center !important;
   background-size: cover !important;
   background-attachment: fixed !important;  /* This creates the parallax effect */
   color: #7C7C7C;
