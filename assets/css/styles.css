@@ -406,7 +406,7 @@ img {
   display: block;
   width: 100%;
   overflow: hidden;
-  height: 180px;
+  height: 300px;
   margin: 0 0 20px;
   position: relative;
 }
@@ -862,4 +862,18 @@ body {
   margin-right: auto !important;
   width: 100% !important;
   max-width: 100% !important;
+}
+
+/* Make project images taller in the grid */
+.thumbnails .img {
+  height: 300px;         /* Increase this value for more height */
+  overflow: hidden;
+  display: block;
+}
+
+.thumbnails .img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;     /* Ensures the image fills the area and is cropped if needed */
+  display: block;
 }
