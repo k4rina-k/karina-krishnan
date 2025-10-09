@@ -229,7 +229,7 @@ a:hover {
   background-size: cover !important;
   background-attachment: fixed !important;  /* This creates the parallax effect */
   color: #7C7C7C;
-  padding: 30px 0 35px 0;
+  padding: 80px 0 90px 0;
   position: relative;
   overflow: hidden;
 }
