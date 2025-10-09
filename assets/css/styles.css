@@ -791,8 +791,8 @@ footer.entry-meta .meta-in {
 }
 /* Max page width
 /////////////////////////////////////////////////////////////////////*/
-@media (min-width: 1200px) {
-  /* Reduce gaps from the edges for all pages */
+/* @media (min-width: 1200px) {
+  Reduce gaps from the edges for all pages
   .container {
   padding-left: 9px !important;
   padding-right: 9px !important;
@@ -800,7 +800,7 @@ footer.entry-meta .meta-in {
   margin-right: 0 !important;
   width: 100% !important;
   max-width: 100% !important;
-} }
+} } */
 
 /* Photo Gallery Styles */
 .photo-gallery {
