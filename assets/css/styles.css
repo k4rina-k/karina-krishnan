@@ -855,3 +855,11 @@ footer.entry-meta .meta-in {
 body {
   overflow-x: hidden;
 }
+.container {
+  padding-left: 32px !important;
+  padding-right: 32px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
