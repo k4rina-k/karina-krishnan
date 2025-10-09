@@ -891,3 +891,15 @@ body {
   object-fit: cover;     /* Ensures the image fills the area and is cropped if needed */
   display: block;
 }
+
+/* Make STEMSpire image zoom out to fit better */
+.thumbnails .img img[src*="stemspire.jpeg"] {
+  object-fit: contain !important;  /* Shows full image, may have letterboxing */
+  object-position: center;
+}
+
+/* Alternative: Scale down the image */
+.thumbnails .img img[src*="stemspire.jpeg"] {
+  transform: scale(0.8);  /* Makes image 80% of original size */
+  object-fit: cover;
+}
