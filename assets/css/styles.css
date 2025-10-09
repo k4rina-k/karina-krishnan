@@ -791,11 +791,11 @@ footer.entry-meta .meta-in {
 }
 /* Max page width
 /////////////////////////////////////////////////////////////////////*/
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
   /* Reduce gaps from the edges for all pages */
   .container {
-  padding-left: 7px !important;
-  padding-right: 7px !important;
+  padding-left: 9px !important;
+  padding-right: 9px !important;
   margin-left: 0 !important;
   margin-right: 0 !important;
   width: 100% !important;
