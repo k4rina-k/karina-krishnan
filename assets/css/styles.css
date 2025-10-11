@@ -918,3 +918,11 @@ body {
   margin: 0 auto !important; /* Center the circular image */
   display: block;
 }
+
+/* Header image for projects page */
+.projects #head {
+  background: #f4f4f4 url(../images/dark.jpeg) center center !important;
+  background-size: cover !important;
+  background-attachment: fixed !important;
+  padding: 80px 0 90px 0; /* Adjust height as needed */
+}
