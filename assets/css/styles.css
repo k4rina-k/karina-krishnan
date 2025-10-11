@@ -904,3 +904,12 @@ body {
   transform: scale(0.8);  /* Makes image 80% of original size */
   object-fit: cover;
 }
+
+/* Center title only on projects page */
+.projects #head .title {
+  text-align: center !important;
+}
+
+.projects #head #logo {
+  text-align: center !important;
+}
