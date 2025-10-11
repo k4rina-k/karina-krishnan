@@ -929,14 +929,14 @@ body {
   background: none !important;
   padding: 0 !important;
   border-radius: 0 !important;
-  color: white !important;
+  color: black !important;
 }
 
 .projects #head .tagline {
   background: none !important;
   padding: 0 !important;
   border-radius: 0 !important;
-  color: white !important;
+  color: black !important;
 }
 
 .projects #head #logo {
@@ -956,7 +956,7 @@ body {
   padding: 80px 0 90px 0; /* Adjust height as needed */
 }
 
-/* Make tagline links white too */
+/* Make tagline links black too */
 .projects #head .tagline a {
-  color: white !important;
+  color: black !important;
 }
