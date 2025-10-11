@@ -926,6 +926,17 @@ body {
 /* Center title and profile image only on projects page */
 .projects #head .title {
   text-align: center !important;
+  background: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  color: white !important;
+}
+
+.projects #head .tagline {
+  background: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  color: white !important;
 }
 
 .projects #head #logo {
