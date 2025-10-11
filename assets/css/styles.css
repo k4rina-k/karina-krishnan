@@ -905,11 +905,16 @@ body {
   object-fit: cover;
 }
 
-/* Center title only on projects page */
+/* Center title and profile image only on projects page */
 .projects #head .title {
   text-align: center !important;
 }
 
 .projects #head #logo {
   text-align: center !important;
+}
+
+.projects #head img.img-circle {
+  margin: 0 auto !important; /* Center the circular image */
+  display: block;
 }
