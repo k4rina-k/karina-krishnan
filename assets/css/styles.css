@@ -955,3 +955,8 @@ body {
   background-attachment: fixed !important;
   padding: 80px 0 90px 0; /* Adjust height as needed */
 }
+
+/* Make tagline links white too */
+.projects #head .tagline a {
+  color: white !important;
+}
