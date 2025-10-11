@@ -867,13 +867,13 @@ footer.entry-meta .meta-in {
   opacity: 1;
 }
 
-/* Responsive YouTube video */
+/* Responsive YouTube video - 70% width, properly sized */
 .video-container {
     position: relative;
-    width: 100%;
-    max-width: 600px; /* Limit the maximum width */
+    width: 70%; /* Use 70% of container width */
+    max-width: 500px; /* Smaller maximum width */
     height: 0;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    padding-bottom: 39.375%; /* 70% × 56.25% = maintains 16:9 aspect ratio */
     margin: 20px 0 20px auto; /* Right-aligned video */
 }
 
