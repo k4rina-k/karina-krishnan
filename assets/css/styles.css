@@ -871,9 +871,10 @@ footer.entry-meta .meta-in {
 .video-container {
     position: relative;
     width: 100%;
+    max-width: 600px; /* Limit the maximum width */
     height: 0;
     padding-bottom: 56.25%; /* 16:9 aspect ratio */
-    margin: 20px 0;
+    margin: 20px 0 20px auto; /* Right-aligned video */
 }
 
 .video-container iframe {
