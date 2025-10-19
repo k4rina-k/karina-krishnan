@@ -1079,11 +1079,11 @@ p, .lead, .text-msg {
 
 /* Links */
 a {
-  color: #bd1550 !important;
+  color: white !important;
 }
 
 a:hover {
-  color: #e93675 !important;
+  color: white !important;
 }
 
 /* Scroll-triggered text animation - slower fly away */
