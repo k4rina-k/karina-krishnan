@@ -125,9 +125,19 @@ window.addEventListener('scroll', function() {
   if (scrollY > 100 && scrollY < headerHeight - 200) {
     leftText.classList.add('visible');
     rightText.classList.add('visible');
+    leftText.classList.remove('fly-up');
+    rightText.classList.remove('fly-up');
+  } else if (scrollY >= headerHeight - 200) {
+    // Fly up effect when scrolling past header
+    leftText.classList.add('fly-up');
+    rightText.classList.add('fly-up');
+    leftText.classList.remove('visible');
+    rightText.classList.remove('visible');
   } else {
     leftText.classList.remove('visible');
     rightText.classList.remove('visible');
+    leftText.classList.remove('fly-up');
+    rightText.classList.remove('fly-up');
   }
 });
 </script>

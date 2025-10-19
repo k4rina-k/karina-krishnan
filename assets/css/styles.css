@@ -1051,21 +1051,36 @@ a:hover {
   color: white;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Smooth easing */
   z-index: 10;
   pointer-events: none;
 }
 
 .scroll-text.left {
-  left: 50px;
+  left: 30%; /* Moved closer to center */
+  transform: translateY(-50%) translateX(-100px); /* Start position for fly-up effect */
 }
 
 .scroll-text.right {
-  right: 50px;
+  right: 30%; /* Moved closer to center */
+  transform: translateY(-50%) translateX(100px); /* Start position for fly-up effect */
 }
 
 .scroll-text.visible {
   opacity: 1;
+}
+
+.scroll-text.left.visible {
+  transform: translateY(-50%) translateX(0); /* Fly to final position */
+}
+
+.scroll-text.right.visible {
+  transform: translateY(-50%) translateX(0); /* Fly to final position */
+}
+
+.scroll-text.fly-up {
+  transform: translateY(-150%) translateX(0); /* Fly up and out */
+  opacity: 0;
 }
 
 /* Only show on home page */
