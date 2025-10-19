@@ -1089,7 +1089,7 @@ a:hover {
 /* Scroll-triggered text animation - single line, less neon */
 .scroll-text {
   position: fixed;
-  top: 45%; /* Lower position */
+  top: 65%; /* Lower position */
   left: 50%;
   transform: translateX(-50%) translateY(-50%); /* Center horizontally */
   font-family: Alice, Georgia, serif;
@@ -1149,5 +1149,10 @@ body:not(.home) .scroll-text {
 /* Constrain main content to 80% width */
 #main .maincontent {
     max-width: 80%;
-    margin: 0 auto;
+    margin: 0 auto !important;
+    float: none !important;
+}
+
+#main .container {
+    text-align: center;
 }
