@@ -1072,3 +1072,31 @@ a:hover {
 body:not(.home) .scroll-text {
   display: none;
 }
+
+/* Projects button styling */
+.projects-button-container {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.projects-button-container .btn {
+    background-color: rgba(189, 21, 80, 0.9);
+    border: 2px solid white;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.projects-button-container .btn:hover {
+    background-color: rgba(189, 21, 80, 1);
+    transform: scale(1.05);
+    text-decoration: none;
+    color: white;
+}
