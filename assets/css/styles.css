@@ -1152,3 +1152,9 @@ body:not(.home) .scroll-text {
     text-decoration: none;
     color: white;
 }
+
+/* Constrain main content to 80% width */
+#main .maincontent {
+    max-width: 80%;
+    margin: 0 auto;
+}
