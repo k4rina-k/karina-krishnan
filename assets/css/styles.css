@@ -1103,11 +1103,11 @@ a:hover {
 }
 
 .scroll-text.left {
-  left: 30%; /* Outer left column (not middle) */
+  left: 20%; /* Outer left column (not middle) */
 }
 
 .scroll-text.right {
-  right: 30%; /* Outer right column (not middle) */
+  right: 20%; /* Outer right column (not middle) */
 }
 
 .scroll-text.visible {
