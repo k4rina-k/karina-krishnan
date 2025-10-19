@@ -279,7 +279,8 @@ a:hover {
   background: #f4f4f4 url(../images/background-pic.jpeg) bottom center !important;
   background-size: cover !important;
   background-attachment: fixed !important;
-  padding: 200px 0 220px 0; /* Make this MUCH bigger */
+  padding: 50vh 0; /* 50% of viewport height on top and bottom */
+  min-height: 100vh; /* Full screen height */
 }
 .home #head .title {
   font-size: 49px;
