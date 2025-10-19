@@ -276,10 +276,10 @@ a:hover {
   color: #5E5E5E;
 }
 .home #head {
-  background: #f4f4f4 url(../images/me.jpeg) bottom center !important;
+  background: #f4f4f4 url(../images/background-pic.jpg) bottom center !important;
   background-size: cover !important;
   background-attachment: fixed !important;
-  padding: 150px 0 160px 0; /* Extra tall header */
+  padding: 150px 0 160px 0; /* Make this bigger */
 }
 .home #head .title {
   font-size: 49px;

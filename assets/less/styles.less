@@ -86,7 +86,8 @@ a {
 #head {
 	background:@header-bg;
 	background-size: @header-bg-size;
-	color:#7C7C7C; padding:100px 0 110px 0; // Much bigger header
+	color:#7C7C7C; 
+	padding:100px 0 110px 0; // Default header size
 
 	img.img-circle {
 		display:block; width:140px; height:140px; overflow:hidden;
@@ -104,10 +105,10 @@ a {
 	}
 }
 
-
-// on homepage header is a bit different
+// Make the HOME page header even BIGGER
 .home {
-	#head { padding:90px 0;
+	#head { 
+		padding:150px 0 160px 0; // Make this BIGGER than the default
 		.title { .font-size(4.9); }
 		.tagline { .font-size(1.6); margin:15px 0 0; }
 	}
