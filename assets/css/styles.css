@@ -978,246 +978,92 @@ body {
   color: white !important;
 }
 
-/* Gradient transition from header to content */
+/* Much more pronounced gradient transition from header to content */
 #main {
   background: linear-gradient(to bottom, 
     rgba(0,0,0,0) 0%,           /* Completely transparent at top */
-    rgba(0,0,0,0.1) 10%,        /* Very slight fade */
-    rgba(0,0,0,0.2) 20%,        /* Light fade */
-    rgba(0,0,0,0.35) 30%,       /* Gradual increase */
-    rgba(0,0,0,0.5) 40%,        /* Medium fade */
-    rgba(0,0,0,0.65) 50%,       /* More fade */
-    rgba(0,0,0,0.8) 60%,        /* Strong fade */
-    rgba(0,0,0,0.9) 70%,        /* Very strong fade */
-    rgba(0,0,0,0.95) 80%,       /* Almost solid */
-    rgba(0,0,0,1) 90%,          /* Solid black */
+    rgba(0,0,0,0.05) 5%,        /* Very gradual start */
+    rgba(0,0,0,0.1) 10%,        /* Slow fade */
+    rgba(0,0,0,0.15) 15%,       /* More gradual steps */
+    rgba(0,0,0,0.25) 20%,       /* Gentle increase */
+    rgba(0,0,0,0.35) 25%,       /* Building opacity */
+    rgba(0,0,0,0.45) 30%,       /* Continued fade */
+    rgba(0,0,0,0.55) 35%,       /* More pronounced */
+    rgba(0,0,0,0.65) 40%,       /* Medium fade */
+    rgba(0,0,0,0.75) 45%,       /* Stronger fade */
+    rgba(0,0,0,0.82) 50%,       /* Getting darker */
+    rgba(0,0,0,0.88) 55%,       /* Almost there */
+    rgba(0,0,0,0.92) 60%,       /* Very dark */
+    rgba(0,0,0,0.95) 65%,       /* Nearly solid */
+    rgba(0,0,0,0.97) 70%,       /* Almost completely solid */
+    rgba(0,0,0,0.99) 75%,       /* Practically solid */
+    rgba(0,0,0,1) 80%,          /* Completely solid from here */
     rgba(0,0,0,1) 100%          /* Ensure solid black at bottom */
   ) !important;
   position: relative;
   z-index: 1;
-  min-height: 100vh; /* Ensure gradient covers full viewport */
+  min-height: 150vh; /* Make gradient cover more area */
+  padding-top: 100px; /* Extra space for seamless transition */
 }
 
-/* Extend the header gradient overlay for smoother transition */
+/* Extended and more pronounced header gradient overlay */
 #head::after {
   content: '';
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 400px; /* Even longer transition */
+  height: 500px; /* Much longer gradient fade */
   background: linear-gradient(to bottom, 
     rgba(0,0,0,0) 0%,
-    rgba(0,0,0,0.1) 20%,
-    rgba(0,0,0,0.3) 40%,
-    rgba(0,0,0,0.5) 60%,
-    rgba(0,0,0,0.7) 80%,
-    rgba(0,0,0,0.9) 100%
+    rgba(0,0,0,0.05) 10%,
+    rgba(0,0,0,0.1) 15%,
+    rgba(0,0,0,0.2) 25%,
+    rgba(0,0,0,0.3) 35%,
+    rgba(0,0,0,0.4) 45%,
+    rgba(0,0,0,0.5) 55%,
+    rgba(0,0,0,0.6) 65%,
+    rgba(0,0,0,0.75) 75%,
+    rgba(0,0,0,0.85) 85%,
+    rgba(0,0,0,0.95) 95%,
+    rgba(0,0,0,1) 100%
   );
   pointer-events: none;
   z-index: 1;
 }
 
-/* Remove any conflicting background colors */
-body {
-  background-color: black !important;
-  color: white !important;
+/* Ensure header content stays above gradient */
+#head .projects-button-container {
+  position: relative;
+  z-index: 2;
 }
 
-/* Ensure container doesn't add background */
-.container {
-  background: transparent !important;
+/* Make the gradient start higher up */
+#head {
+  position: relative;
+  overflow: hidden;
 }
 
-/* Headers */
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-  color: white !important;
-}
-
-/* Paragraphs and general text */
-p, .lead, .text-msg {
-  color: white !important;
-}
-
-/* Navigation */
-.navbar-default {
-  background-color: black !important;
-  border-color: #333 !important;
-}
-
-.navbar-default .navbar-nav > li > a {
-  color: white !important;
-}
-
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus {
-  color: #ccc !important;
-  background-color: #333 !important;
-}
-
-/* Footer */
-#footer {
-  background: black !important;
-  color: white !important;
-}
-
-/* Project thumbnails */
-.thumbnail {
-  background-color: black !important;
-  color: white !important;
-}
-
-.thumbnail .title {
-  color: white !important;
-}
-
-/* Sections */
-.section {
-  background-color: black !important;
-  color: white !important;
-}
-
-/* Links */
-a {
-  color: white !important;
-}
-
-a:hover {
-  color: white !important;
-}
-
-/* Scroll-triggered text animation - slower fly away */
-.scroll-text {
-  position: fixed;
-  top: 45%;
-  left: 50%;
-  transform: translateX(-50%) translateY(100px); /* Start from below */
-  font-family: Alice, Georgia, serif;
-  font-size: 80px;
-  font-weight: bold;
-  color: white;
-  opacity: 0; /* Start invisible */
-  transition: all 1.2s cubic-bezier(0.19, 1, 0.22, 1); /* More dramatic slow-out effect */
-  z-index: 10;
-  pointer-events: none;
-  
-  /* Subtle glow */
-  text-shadow: 
-    0 0 2px #fff,
-    0 0 4px #fff,
-    0 0 6px #fff;
-}
-
-/* Animate in after delay */
-.scroll-text.animate-in {
-  opacity: 1;
-  transform: translateX(-50%) translateY(-50%); /* Fly to center position */
-}
-
-.scroll-text.fly-up {
-  transform: translateX(-50%) translateY(-300px); /* Fly higher and out */
-  opacity: 0;
-}
-
-/* Only show on home page */
-body:not(.home) .scroll-text {
-  display: none;
-}
-
-/* Projects button styling - white neon with black text */
-.projects-button-container {
+/* Additional overlay for even smoother transition */
+#main::before {
+  content: '';
   position: absolute;
-  bottom: 30px; /* Moved down from 50px */
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
+  top: -200px;
+  left: 0;
+  right: 0;
+  height: 400px;
+  background: linear-gradient(to bottom, 
+    rgba(0,0,0,0) 0%,
+    rgba(0,0,0,0.8) 100%
+  );
+  z-index: 0;
+  pointer-events: none;
 }
 
-.projects-button-container .btn {
-  background-color: transparent;
-  border: 2px solid white;
-  color: black;
-  background: white;
-  padding: 15px 30px;
-  font-size: 18px;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-  
-  /* Same neon effect as KARINA KRISHNAN text */
-  box-shadow: 
-    0 0 2px #fff,
-    0 0 4px #fff,
-    0 0 6px #fff,
-    0 0 8px #fff,
-    0 0 12px #fff;
-  
-  /* Subtle glow animation */
-  animation: buttonGlow 2s ease-in-out infinite alternate;
-}
-
-.projects-button-container .btn:hover {
-  background-color: rgba(255, 255, 255, 0.9);
-  transform: scale(1.05);
-  text-decoration: none;
-  color: black;
-  
-  /* Enhanced glow on hover */
-  box-shadow: 
-    0 0 4px #fff,
-    0 0 8px #fff,
-    0 0 12px #fff,
-    0 0 16px #fff,
-    0 0 20px #fff;
-}
-
-/* Bigger text */
-.big-text {
-    font-size: 1.4em !important; /* Make text bigger */
-    line-height: 1.6;
-}
-
-/* Projects button styling - bigger button, positioned below text */
-.projects-button-container {
-    margin-top: 40px; /* Space above button */
-    margin-bottom: 40px; /* Space below button */
-    text-align: center;
-}
-
-.projects-button-container .btn {
-    background: white;
-    border: 2px solid white;
-    color: black !important; /* Make text black */
-    padding: 20px 40px;
-    font-size: 22px;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 8px; /* Slightly more rounded */
-    transition: all 0.3s ease;
-    
-    /* White neon glow effect */
-    box-shadow: 
-        0 0 2px #fff,
-        0 0 4px #fff,
-        0 0 6px #fff,
-        0 0 8px #fff,
-        0 0 12px #fff;
-}
-
-.projects-button-container .btn:hover {
-    background-color: rgba(255, 255, 255, 0.9);
-    transform: scale(1.05);
-    text-decoration: none;
-    color: black !important; /* Keep text black on hover */
-    
-    /* Enhanced glow on hover */
-    box-shadow: 
-        0 0 4px #fff,
-        0 0 8px #fff,
-        0 0 12px #fff,
-        0 0 16px #fff,
-        0 0 20px #fff;
+/* Ensure main content is above the overlay */
+#main .container {
+  position: relative;
+  z-index: 2;
 }
 
 /* Override any other button styles that might interfere */
