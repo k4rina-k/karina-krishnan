@@ -30,6 +30,11 @@
 </head>
 <body class="home">
 
+<!-- Scroll-triggered text -->
+<div class="scroll-text left" id="scroll-karina">KARINA</div>
+<div class="scroll-text right" id="scroll-krishnan">KRISHNAN</div>
+
+<!-- Rest of your existing content -->
 <header id="header">
 	<div id="head" class="parallax" parallax-speed="2">
 	</div>
@@ -121,6 +126,26 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 <script src="assets/js/template.js"></script>
+<script>
+// Scroll-triggered text animation
+window.addEventListener('scroll', function() {
+  const scrollY = window.pageYOffset;
+  const headerHeight = document.getElementById('head').offsetHeight;
+  
+  const leftText = document.getElementById('scroll-karina');
+  const rightText = document.getElementById('scroll-krishnan');
+  
+  // Show text when scrolling within the header area
+  if (scrollY > 100 && scrollY < headerHeight - 200) {
+    leftText.classList.add('visible');
+    rightText.classList.add('visible');
+  } else {
+    leftText.classList.remove('visible');
+    rightText.classList.remove('visible');
+  }
+});
+</script>
+
 </body>
 </html>
 

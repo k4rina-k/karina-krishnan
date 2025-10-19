@@ -1038,3 +1038,36 @@ a {
 a:hover {
   color: #e93675 !important;
 }
+
+/* Scroll-triggered text animation for index page */
+.scroll-text {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: Alice, Georgia, serif;
+  font-size: 80px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.scroll-text.left {
+  left: 50px;
+}
+
+.scroll-text.right {
+  right: 50px;
+}
+
+.scroll-text.visible {
+  opacity: 1;
+}
+
+/* Only show on home page */
+body:not(.home) .scroll-text {
+  display: none;
+}
