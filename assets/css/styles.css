@@ -1086,59 +1086,27 @@ a:hover {
   color: #e93675 !important;
 }
 
-/* Scroll-triggered text animation for index page with neon effect */
+/* Scroll-triggered text animation for index page with subtle neon effect */
 .scroll-text {
   position: fixed;
-  top: 25%; /* Changed from 35% to 25% - moves text much higher */
+  top: 25%;
   font-family: Alice, Georgia, serif;
   font-size: 80px;
   font-weight: bold;
   color: white;
-  opacity: 0;
+  opacity: 1; /* Start visible */
   transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   z-index: 10;
   pointer-events: none;
-  transform: translateY(100px);
+  transform: translateY(-25%); /* Start in final position */
   
-  /* Neon white glow effect */
+  /* Subtle neon white glow effect - easier to read */
   text-shadow: 
-    0 0 5px #fff,
-    0 0 10px #fff,
-    0 0 15px #fff,
-    0 0 20px #fff,
-    0 0 35px #fff,
-    0 0 40px #fff,
-    0 0 50px #fff,
-    0 0 75px #fff;
-  
-  /* Animation for pulsing glow */
-  animation: neonPulse 2s ease-in-out infinite alternate;
-}
-
-/* Neon pulsing animation */
-@keyframes neonPulse {
-  from {
-    text-shadow: 
-      0 0 5px #fff,
-      0 0 10px #fff,
-      0 0 15px #fff,
-      0 0 20px #fff,
-      0 0 35px #fff,
-      0 0 40px #fff,
-      0 0 50px #fff,
-      0 0 75px #fff;
-  }
-  to {
-    text-shadow: 
-      0 0 2px #fff,
-      0 0 5px #fff,
-      0 0 8px #fff,
-      0 0 12px #fff,
-      0 0 18px #fff,
-      0 0 25px #fff,
-      0 0 35px #fff,
-      0 0 45px #fff;
-  }
+    0 0 3px #fff,
+    0 0 6px #fff,
+    0 0 9px #fff,
+    0 0 12px #fff,
+    0 0 18px #fff;
 }
 
 .scroll-text.left {
@@ -1151,11 +1119,11 @@ a:hover {
 
 .scroll-text.visible {
   opacity: 1;
-  transform: translateY(-25%); /* Changed from -35% to -25% to match new top position */
+  transform: translateY(-25%);
 }
 
 .scroll-text.fly-up {
-  transform: translateY(-200px);
+  transform: translateY(-200px); /* Fly up and out */
   opacity: 0;
 }
 
