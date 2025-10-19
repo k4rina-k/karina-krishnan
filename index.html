@@ -104,20 +104,26 @@
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 <script src="assets/js/template.js"></script>
 <script>
-// Scroll-triggered text animation - starts visible, then flies away
+// Delayed entrance animation - text flies in after 0.5 seconds
+window.addEventListener('load', function() {
+  setTimeout(function() {
+    const nameText = document.getElementById('scroll-name');
+    nameText.classList.add('animate-in');
+  }, 500); // 0.5 second delay
+});
+
+// Scroll-triggered text animation - flies away when scrolling
 window.addEventListener('scroll', function() {
   const scrollY = window.pageYOffset;
-  const headerHeight = document.getElementById('head').offsetHeight;
-  
   const nameText = document.getElementById('scroll-name');
   
-  // Text starts visible, flies up when scrolling past certain point
-  if (scrollY > headerHeight - 300) {
-    // Fly up effect when scrolling past header
+  // Text flies up when scrolling past certain point
+  if (scrollY > 150) {
     nameText.classList.add('fly-up');
+    nameText.classList.remove('animate-in');
   } else {
-    // Keep text visible at top
     nameText.classList.remove('fly-up');
+    nameText.classList.add('animate-in');
   }
 });
 </script>
