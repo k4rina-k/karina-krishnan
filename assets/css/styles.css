@@ -1038,16 +1038,3 @@ a {
 a:hover {
   color: #e93675 !important;
 }
-
-/* Header backgrounds - keep images but overlay with dark */
-#head {
-  background-color: black !important;
-}
-
-.home #head {
-  background-color: black !important;
-}
-
-.projects #head {
-  background-color: black !important;
-}
