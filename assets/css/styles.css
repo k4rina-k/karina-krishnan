@@ -1086,44 +1086,30 @@ a:hover {
   color: #e93675 !important;
 }
 
-/* Scroll-triggered text animation for index page with subtle neon effect */
+/* Scroll-triggered text animation - single line, less neon */
 .scroll-text {
   position: fixed;
-  top: 25%;
+  top: 45%; /* Lower position */
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%); /* Center horizontally */
   font-family: Alice, Georgia, serif;
   font-size: 80px;
   font-weight: bold;
   color: white;
-  opacity: 1; /* Start visible */
+  opacity: 1;
   transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   z-index: 10;
   pointer-events: none;
-  transform: translateY(-25%); /* Start in final position */
   
-  /* Subtle neon white glow effect - easier to read */
+  /* Subtle glow - much more readable */
   text-shadow: 
-    0 0 3px #fff,
-    0 0 6px #fff,
-    0 0 9px #fff,
-    0 0 12px #fff,
-    0 0 18px #fff;
-}
-
-.scroll-text.left {
-  left: 15%;
-}
-
-.scroll-text.right {
-  right: 15%;
-}
-
-.scroll-text.visible {
-  opacity: 1;
-  transform: translateY(-25%);
+    0 0 2px #fff,
+    0 0 4px #fff,
+    0 0 6px #fff;
 }
 
 .scroll-text.fly-up {
-  transform: translateY(-200px); /* Fly up and out */
+  transform: translateX(-50%) translateY(-200px); /* Fly up and out */
   opacity: 0;
 }
 

@@ -31,8 +31,7 @@
 <body class="home">
 
 <!-- Scroll-triggered text -->
-<div class="scroll-text left" id="scroll-karina">KARINA</div>
-<div class="scroll-text right" id="scroll-krishnan">KRISHNAN</div>
+<div class="scroll-text center" id="scroll-name">KARINA KRISHNAN</div>
 
 <!-- Rest of your existing content -->
 <header id="header">
@@ -111,18 +110,15 @@ window.addEventListener('scroll', function() {
   const scrollY = window.pageYOffset;
   const headerHeight = document.getElementById('head').offsetHeight;
   
-  const leftText = document.getElementById('scroll-karina');
-  const rightText = document.getElementById('scroll-krishnan');
+  const nameText = document.getElementById('scroll-name');
   
   // Text starts visible, flies up when scrolling past certain point
   if (scrollY > headerHeight - 300) {
     // Fly up effect when scrolling past header
-    leftText.classList.add('fly-up');
-    rightText.classList.add('fly-up');
+    nameText.classList.add('fly-up');
   } else {
     // Keep text visible at top
-    leftText.classList.remove('fly-up');
-    rightText.classList.remove('fly-up');
+    nameText.classList.remove('fly-up');
   }
 });
 </script>
