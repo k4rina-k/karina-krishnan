@@ -1086,37 +1086,76 @@ a:hover {
   color: #e93675 !important;
 }
 
-/* Scroll-triggered text animation for index page */
+/* Scroll-triggered text animation for index page with neon effect */
 .scroll-text {
   position: fixed;
-  top: 50%;
+  top: 25%; /* Changed from 35% to 25% - moves text much higher */
   font-family: Alice, Georgia, serif;
   font-size: 80px;
   font-weight: bold;
   color: white;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
   opacity: 0;
   transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   z-index: 10;
   pointer-events: none;
-  transform: translateY(100px); /* Start from below */
+  transform: translateY(100px);
+  
+  /* Neon white glow effect */
+  text-shadow: 
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 15px #fff,
+    0 0 20px #fff,
+    0 0 35px #fff,
+    0 0 40px #fff,
+    0 0 50px #fff,
+    0 0 75px #fff;
+  
+  /* Animation for pulsing glow */
+  animation: neonPulse 2s ease-in-out infinite alternate;
+}
+
+/* Neon pulsing animation */
+@keyframes neonPulse {
+  from {
+    text-shadow: 
+      0 0 5px #fff,
+      0 0 10px #fff,
+      0 0 15px #fff,
+      0 0 20px #fff,
+      0 0 35px #fff,
+      0 0 40px #fff,
+      0 0 50px #fff,
+      0 0 75px #fff;
+  }
+  to {
+    text-shadow: 
+      0 0 2px #fff,
+      0 0 5px #fff,
+      0 0 8px #fff,
+      0 0 12px #fff,
+      0 0 18px #fff,
+      0 0 25px #fff,
+      0 0 35px #fff,
+      0 0 45px #fff;
+  }
 }
 
 .scroll-text.left {
-  left: 20%; /* Outer left column (not middle) */
+  left: 15%;
 }
 
 .scroll-text.right {
-  right: 20%; /* Outer right column (not middle) */
+  right: 15%;
 }
 
 .scroll-text.visible {
   opacity: 1;
-  transform: translateY(-50%); /* Fly up to center */
+  transform: translateY(-25%); /* Changed from -35% to -25% to match new top position */
 }
 
 .scroll-text.fly-up {
-  transform: translateY(-200px); /* Fly further up and out */
+  transform: translateY(-200px);
   opacity: 0;
 }
 
