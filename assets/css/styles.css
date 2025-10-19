@@ -1250,3 +1250,36 @@ body:not(.home) .scroll-text {
       0 0 14px #fff;
   }
 }
+
+/* Projects button styling - ensure it's below all text */
+.projects-button-container {
+    margin-top: 60px !important; /* Extra space above button */
+    margin-bottom: 60px !important; /* Extra space below button */
+    text-align: center;
+    clear: both; /* Ensure it clears any floating elements */
+}
+
+.projects-button-container .btn {
+    background: white;
+    border: 2px solid white;
+    color: black !important;
+    padding: 20px 40px;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    
+    /* White neon glow effect */
+    box-shadow: 
+        0 0 2px #fff,
+        0 0 4px #fff,
+        0 0 6px #fff,
+        0 0 8px #fff,
+        0 0 12px #fff;
+}
+
+/* Override any positioning conflicts */
+.maincontent {
+    margin-bottom: 40px; /* Ensure text has bottom margin */
+}
