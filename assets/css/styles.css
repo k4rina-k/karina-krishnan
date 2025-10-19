@@ -1085,42 +1085,33 @@ a:hover {
 .scroll-text {
   position: fixed;
   top: 50%;
-  transform: translateY(-50%);
   font-family: Alice, Georgia, serif;
   font-size: 80px;
   font-weight: bold;
   color: white;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
   opacity: 0;
-  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Smooth easing */
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   z-index: 10;
   pointer-events: none;
+  transform: translateY(100px); /* Start from below */
 }
 
 .scroll-text.left {
-  left: 30%; /* Moved closer to center */
-  transform: translateY(-50%) translateX(-100px); /* Start position for fly-up effect */
+  left: 40%; /* Outer left column (not middle) */
 }
 
 .scroll-text.right {
-  right: 30%; /* Moved closer to center */
-  transform: translateY(-50%) translateX(100px); /* Start position for fly-up effect */
+  right: 40%; /* Outer right column (not middle) */
 }
 
 .scroll-text.visible {
   opacity: 1;
-}
-
-.scroll-text.left.visible {
-  transform: translateY(-50%) translateX(0); /* Fly to final position */
-}
-
-.scroll-text.right.visible {
-  transform: translateY(-50%) translateX(0); /* Fly to final position */
+  transform: translateY(-50%); /* Fly up to center */
 }
 
 .scroll-text.fly-up {
-  transform: translateY(-150%) translateX(0); /* Fly up and out */
+  transform: translateY(-200px); /* Fly further up and out */
   opacity: 0;
 }
 
