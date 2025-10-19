@@ -7,6 +7,7 @@ body {
   font-family: "Open sans", Helvetica, Arial, sans-serif;
   color: #666666;
   padding: 0;
+  background-color: black !important;
 }
 .topspace {
   margin-top: 40px;
@@ -65,16 +66,16 @@ body {
   padding: 5px 30px;
 }
 .navbar-default {
-  background-color: #ffffff;
-  border-color: #cccccc;
+  background-color: black !important;
+  border-color: #333 !important;
 }
 .navbar-default .navbar-nav > li > a {
-  color: #454545;
+  color: white !important;
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: #000000;
-  background-color: #ffffff;
+  color: #ccc !important;
+  background-color: #333 !important;
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
@@ -169,7 +170,7 @@ h6,
 .h6 {
   font-family: "Open sans", Helvetica, Arial, sans-serif;
   font-weight: 400;
-  color: #333333;
+  color: white !important;
 }
 h1 {
   font-size: 40px;
@@ -192,10 +193,10 @@ h5 {
   font-size: 1.25rem;
 }
 a {
-  color: #bd1550;
+  color: #bd1550 !important;
 }
 a:hover {
-  color: #e93675;
+  color: #e93675 !important;
 }
 .lead {
   font-weight: 300;
@@ -416,7 +417,8 @@ img {
   padding: 0;
   text-align: center;
   text-decoration: none;
-  color: #333;
+  color: white !important;
+  background-color: black !important;
 }
 .thumbnail .img {
   display: block;
@@ -431,6 +433,7 @@ img {
   margin: 0 2em;
   display: block;
   text-indent: 0;
+  color: white !important;
 }
 .thumbnail .cover {
   position: absolute;
@@ -765,10 +768,10 @@ footer.entry-meta .meta-in {
 
 **********************************************************************/
 #footer {
-  background: #232323;
+  background: black !important;
+  color: white !important;
   padding: 30px 0 0 0;
   font-size: 12px;
-  color: #999;
 }
 #footer a {
   color: #ccc;
@@ -960,4 +963,91 @@ body {
 /* Make tagline links black too */
 .projects #head .tagline a {
   color: black !important;
+}
+
+/* Global dark theme - black backgrounds, white text */
+body {
+  background-color: black !important;
+  color: white !important;
+}
+
+/* Main content areas */
+#main {
+  background-color: black !important;
+  color: white !important;
+}
+
+.container {
+  background-color: black !important;
+  color: white !important;
+}
+
+/* Headers */
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  color: white !important;
+}
+
+/* Paragraphs and general text */
+p, .lead, .text-msg {
+  color: white !important;
+}
+
+/* Navigation */
+.navbar-default {
+  background-color: black !important;
+  border-color: #333 !important;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: white !important;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #ccc !important;
+  background-color: #333 !important;
+}
+
+/* Footer */
+#footer {
+  background: black !important;
+  color: white !important;
+}
+
+/* Project thumbnails */
+.thumbnail {
+  background-color: black !important;
+  color: white !important;
+}
+
+.thumbnail .title {
+  color: white !important;
+}
+
+/* Sections */
+.section {
+  background-color: black !important;
+  color: white !important;
+}
+
+/* Links */
+a {
+  color: #bd1550 !important;
+}
+
+a:hover {
+  color: #e93675 !important;
+}
+
+/* Header backgrounds - keep images but overlay with dark */
+#head {
+  background-color: black !important;
+}
+
+.home #head {
+  background-color: black !important;
+}
+
+.projects #head {
+  background-color: black !important;
 }
