@@ -1193,11 +1193,15 @@ body:not(.home) .scroll-text {
   display: none;
 }
 
-/* Projects page header styling with neon effect */
+/* Projects page header styling with white text and neon effect */
 .projects #header {
-  background-color: black;
-  color: white;
+  background-color: black !important;
+  color: white !important;
   padding: 60px 0;
+}
+
+.projects #head {
+  background-color: black !important;
 }
 
 .projects #logo {
@@ -1210,7 +1214,7 @@ body:not(.home) .scroll-text {
   font-family: Alice, Georgia, serif;
   font-size: 48px;
   font-weight: bold;
-  color: white;
+  color: white !important;
   margin: 20px 0 10px 0;
   
   /* Same neon glow effect as index page */
@@ -1223,17 +1227,17 @@ body:not(.home) .scroll-text {
 .projects #logo .tagline {
   display: block;
   font-size: 16px;
-  color: white;
+  color: white !important;
   line-height: 1.4;
 }
 
 .projects #logo .tagline a {
-  color: white;
+  color: white !important;
   text-decoration: none;
 }
 
 .projects #logo .tagline a:hover {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.8) !important;
   text-decoration: underline;
 }
 
@@ -1246,24 +1250,7 @@ body:not(.home) .scroll-text {
   border-radius: 50%;
 }
 
-/* Make navbar text white */
-.projects .navbar-default {
-  background-color: rgba(0, 0, 0, 0.9);
-  border-color: rgba(255, 255, 255, 0.1);
-}
-
-.projects .navbar-default .navbar-nav > li > a {
+/* Force white text on all header elements */
+.projects #header * {
   color: white !important;
-}
-
-.projects .navbar-default .navbar-nav > li > a:hover {
-  color: rgba(255, 255, 255, 0.8) !important;
-}
-
-.projects .navbar-default .navbar-toggle {
-  border-color: white;
-}
-
-.projects .navbar-default .navbar-toggle .icon-bar {
-  background-color: white;
 }
