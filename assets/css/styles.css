@@ -1154,3 +1154,36 @@ body {
     left: auto !important;
     transform: none !important;
 }
+
+/* Scroll-triggered text animation - moved lower */
+.scroll-text {
+  position: fixed;
+  top: 55%; /* Changed from 45% to 55% - moves text lower */
+  left: 50%;
+  transform: translateX(-50%) translateY(100px); /* Start from below */
+  font-family: Alice, Georgia, serif;
+  font-size: 80px;
+  font-weight: bold;
+  color: white;
+  opacity: 0; /* Start invisible */
+  transition: all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: 10;
+  pointer-events: none;
+  
+  /* Subtle glow */
+  text-shadow: 
+    0 0 2px #fff,
+    0 0 4px #fff,
+    0 0 6px #fff;
+}
+
+/* Animate in after delay */
+.scroll-text.animate-in {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-55%); /* Changed from -45% to -55% to match new top position */
+}
+
+.scroll-text.fly-up {
+  transform: translateX(-50%) translateY(-300px); /* Fly higher and out */
+  opacity: 0;
+}
