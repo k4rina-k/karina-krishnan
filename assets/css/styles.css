@@ -1192,3 +1192,78 @@ body {
 body:not(.home) .scroll-text {
   display: none;
 }
+
+/* Projects page header styling with neon effect */
+.projects #header {
+  background-color: black;
+  color: white;
+  padding: 60px 0;
+}
+
+.projects #logo {
+  text-align: center;
+  margin: 0;
+}
+
+.projects #logo .title {
+  display: block;
+  font-family: Alice, Georgia, serif;
+  font-size: 48px;
+  font-weight: bold;
+  color: white;
+  margin: 20px 0 10px 0;
+  
+  /* Same neon glow effect as index page */
+  text-shadow: 
+    0 0 2px #fff,
+    0 0 4px #fff,
+    0 0 6px #fff;
+}
+
+.projects #logo .tagline {
+  display: block;
+  font-size: 16px;
+  color: white;
+  line-height: 1.4;
+}
+
+.projects #logo .tagline a {
+  color: white;
+  text-decoration: none;
+}
+
+.projects #logo .tagline a:hover {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: underline;
+}
+
+/* Style the profile image */
+.projects #logo img {
+  width: 150px;
+  height: 150px;
+  border: 3px solid white;
+  margin-bottom: 20px;
+  border-radius: 50%;
+}
+
+/* Make navbar text white */
+.projects .navbar-default {
+  background-color: rgba(0, 0, 0, 0.9);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.projects .navbar-default .navbar-nav > li > a {
+  color: white !important;
+}
+
+.projects .navbar-default .navbar-nav > li > a:hover {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.projects .navbar-default .navbar-toggle {
+  border-color: white;
+}
+
+.projects .navbar-default .navbar-toggle .icon-bar {
+  background-color: white;
+}
