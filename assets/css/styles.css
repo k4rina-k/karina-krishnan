@@ -228,7 +228,7 @@ a:hover {
   background: #f4f4f4 url(../images/background-pic.jpg) top center;
   background-size: cover;
   color: #7C7C7C;
-  padding: 100px 0 110px 0; /* Change from 30px to 100px */
+  padding: 200px 0 210px 0; /* Extra large header */
   position: relative;
   overflow: hidden;
 }
