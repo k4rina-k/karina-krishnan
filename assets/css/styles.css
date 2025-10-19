@@ -955,7 +955,7 @@ body {
 
 /* Header image for projects page */
 .projects #head {
-  background: #f4f4f4 url(../images/dark.jpeg) center center !important;
+  background: #f4f4f4 url(../images/black.jpeg) center center !important;
   background-size: cover !important;
   background-attachment: fixed !important;
   padding: 80px 0 90px 0; /* Adjust height as needed */
