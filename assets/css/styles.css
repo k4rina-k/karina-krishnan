@@ -1087,86 +1087,116 @@ body {
   position: relative;
   z-index: 2;
 }
+.projects-button-container {
+    margin-top: 60px !important;
+    margin-bottom: 10px !important;
+    text-align: center;
+    clear: both;
+    position: relative !important;
+}
+
+.projects-button-container .btn {
+    background: white !important;
+    border: 2px solid white !important;
+    color: black !important;
+    padding: 20px 40px;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    
+    /* White neon glow effect */
+    box-shadow: 
+        0 0 2px #fff,
+        0 0 4px #fff,
+        0 0 6px #fff,
+        0 0 8px #fff,
+        0 0 12px #fff;
+}
+
+.projects-button-container .btn:hover {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    transform: scale(1.05);
+    text-decoration: none;
+    color: black !important;
+    
+    /* Enhanced glow on hover */
+    box-shadow: 
+        0 0 4px #fff,
+        0 0 8px #fff,
+        0 0 12px #fff,
+        0 0 16px #fff,
+        0 0 20px #fff;
+}
+
 .projects-button-container .btn-primary {
     color: black !important;
 }
+
 .projects-button-container .btn-primary:hover,
 .projects-button-container .btn-primary:focus,
 .projects-button-container .btn-primary:active {
     color: black !important;
 }
-@keyframes buttonGlow {
-  from {
-    box-shadow: 
-      0 0 2px #fff,
-      0 0 4px #fff,
-      0 0 6px #fff,
-      0 0 8px #fff,
-      0 0 12px #fff;
-  }
-  to {
-    box-shadow: 
-      0 0 4px #fff,
-      0 0 6px #fff,
-      0 0 8px #fff,
-      0 0 10px #fff,
-      0 0 14px #fff;
-  }
+
+/* Projects page header styling with white text and neon effect */
+.projects #header {
+  background-color: black !important;
+  color: #ffffff !important;
+  padding: 60px 0;
 }
-.projects-button-container {
-    margin-top: 60px !important; /* Keep space above button */
-    margin-bottom: 10px !important; /* Much smaller bottom margin */
-    text-align: center;
-    clear: both;
-    position: relative !important;
+
+.projects #head {
+  background-color: black !important;
 }
-#footer.topspace {
-    margin-top: 10px !important; /* Reduce from default spacing */
-    padding-top: 15px !important; /* Smaller padding */
-}
-.home #footer.topspace {
-    margin-top: 10px !important;
-    padding-top: 15px !important;
-}
-/* Scroll-triggered text animation - KARINA KRISHNAN on index page */
-.scroll-text {
-  position: fixed;
-  top: 65%;
-  left: 50%;
-  transform: translateX(-50%) translateY(100px);
+
+.projects #logo .title {
+  display: block;
   font-family: Alice, Georgia, serif;
-  font-size: 80px;
+  font-size: 48px;
   font-weight: bold;
-  color: white;
-  opacity: 0;
-  transition: all 2.0s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  z-index: 10;
-  pointer-events: none;
+  color: #ffffff !important;
+  margin: 20px 0 10px 0;
+  background: none !important;
+  padding: 0 !important;
   
-  /* Neon glow effect */
+  /* Same neon glow effect as index page */
   text-shadow: 
     0 0 2px #fff,
     0 0 4px #fff,
     0 0 6px #fff;
 }
 
-/* Animate in after delay */
-.scroll-text.animate-in {
-  opacity: 1;
-  transform: translateX(-50%) translateY(-65%);
+.projects #logo .tagline {
+  display: block;
+  font-size: 16px;
+  color: #ffffff !important;
+  line-height: 1.4;
+  background: none !important;
+  padding: 0 !important;
 }
 
-/* Stay above main content when scrolling */
-.scroll-text.stay-above {
-  opacity: 1;
-  top: 120px; /* Position above main content */
-  transform: translateX(-50%) translateY(0);
-  font-size: 60px; /* Slightly smaller when positioned above */
-  position: fixed;
-  z-index: 100;
+.projects #logo .tagline a {
+  color: #ffffff !important;
+  text-decoration: none;
 }
 
-/* Only show on home page */
-body:not(.home) .scroll-text {
-  display: none;
+/* MY PROJECTS section title with same neon effect as KARINA KRISHNAN */
+.section-title span {
+  font-family: Alice, Georgia, serif;
+  font-size: 60px;
+  font-weight: bold;
+  color: white !important;
+  text-transform: uppercase;
+  
+  /* Same neon glow effect as index page */
+  text-shadow: 
+    0 0 2px #fff,
+    0 0 4px #fff,
+    0 0 6px #fff;
+    
+  display: block;
+  margin: 0 auto;
 }
