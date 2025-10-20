@@ -420,15 +420,21 @@ img {
   display: block;
   overflow: hidden;
   transition: all 0.3s ease;
+  border-radius: 8px; /* Add slight rounding for better neon effect */
 }
 .thumbnail img {
   width: 100%;
   height: auto;
   transition: all 0.5s ease;
+  border-radius: 8px; /* Match the container rounding */
 }
+
+/* Remove the old cover effect */
 .thumbnail .cover {
   display: none;
 }
+
+/* White neon glow ALL AROUND the image on hover */
 .thumbnail:hover .img {
   box-shadow: 
     0 0 8px #fff,
@@ -437,10 +443,14 @@ img {
     0 0 32px #fff;
   transform: scale(1.02);
 }
+
 .thumbnail:hover img {
+  /* Blur the image on hover */
   filter: blur(3px);
   transform: scale(1.1);
 }
+
+/* Learn More button that appears on hover */
 .thumbnail::after {
   content: "Learn More";
   position: absolute;
@@ -471,30 +481,42 @@ img {
   z-index: 10;
   pointer-events: none;
 }
+
 .thumbnail:hover::after {
   /* Show button on hover */
   opacity: 1;
   visibility: visible;
 }
+
+/* Project title styling - bold on hover, no underline */
 .thumbnail .title {
   display: block;
   text-align: center;
   margin-top: 15px;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: normal;
   color: white;
   text-decoration: none !important;
   transition: all 0.3s ease;
 }
+
 .thumbnail:hover .title {
   color: white !important;
   text-decoration: none !important;
-  
-  /* Add neon glow to text on hover */
-  text-shadow: 
-    0 0 2px #fff,
-    0 0 4px #fff,
-    0 0 6px #fff;
+  font-weight: bold !important; /* Make text bold on hover */
+}
+
+/* Remove any default link styling */
+.thumbnail:hover {
+  text-decoration: none !important;
+}
+
+.thumbnail:focus {
+  text-decoration: none !important;
+}
+
+.thumbnail:active {
+  text-decoration: none !important;
 }
 .pagination > li > a {
   color: #808080;
