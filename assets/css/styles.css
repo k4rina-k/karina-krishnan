@@ -12,13 +12,6 @@ body {
 .topspace {
   margin-top: 40px;
 }
-/*********************************************************************
-
-
-                            Navigation in header
-
-
-**********************************************************************/
 .navbar {
   border-width: 1px 0;
   -webkit-border-radius: 0;
@@ -377,7 +370,6 @@ img {
 .panel-cta .panel-body {
   padding: 35px;
 }
-/* Section - Featured */
 .featured {
   font-size: 13px;
   font-size: 0.8125rem;
@@ -392,7 +384,6 @@ img {
   vertical-align: middle;
   margin: 0 0 25px 0;
 }
-/* Section - Recent works */
 .thumbnails {
   padding: 0;
 }
@@ -435,11 +426,9 @@ img {
   height: auto;
   transition: all 0.5s ease;
 }
-/* Remove the old cover effect */
 .thumbnail .cover {
   display: none;
 }
-/* White neon glow only around the IMAGE on hover */
 .thumbnail:hover .img {
   box-shadow: 
     0 0 8px #fff,
@@ -449,11 +438,9 @@ img {
   transform: scale(1.02);
 }
 .thumbnail:hover img {
-  /* Blur the image on hover */
   filter: blur(3px);
   transform: scale(1.1);
 }
-/* Learn More button that appears on hover */
 .thumbnail::after {
   content: "Learn More";
   position: absolute;
@@ -489,7 +476,6 @@ img {
   opacity: 1;
   visibility: visible;
 }
-/* Project title styling - remove underline */
 .thumbnail .title {
   display: block;
   text-align: center;
@@ -510,7 +496,6 @@ img {
     0 0 4px #fff,
     0 0 6px #fff;
 }
-/* pagination */
 .pagination > li > a {
   color: #808080;
   border: 0 none;
@@ -622,7 +607,6 @@ img {
   width: 100%;
   text-align: right;
 }
-/* Posts navigation */
 #nav-below {
   position: fixed;
   top: 48%;
@@ -686,13 +670,6 @@ footer.entry-meta .meta-in {
   margin-top: 0;
   margin-bottom: 30px;
 }
-/*********************************************************************
-
-
-                                COMMENTS
-
-
-**********************************************************************/
 #comments {
   font-size: 13px;
   font-size: 0.8125rem;
@@ -782,28 +759,18 @@ footer.entry-meta .meta-in {
 #respond {
   margin: 55px 0 0 0;
 }
-/*********************************************************************
-
-
-                                FOOTER
-
-
-**********************************************************************/
 #footer {
   background: black !important;
   color: white !important;
   padding: 30px 0 0 0;
   font-size: 12px;
 }
-
 #footer a {
   color: white !important; /* Make all footer links white */
 }
-
 #footer a:hover {
   color: #ccc !important; /* Light gray on hover */
 }
-
 #footer h3.widget-title {
   font-size: 15px;
   font-size: 0.9375rem;
@@ -811,49 +778,35 @@ footer.entry-meta .meta-in {
   color: white !important; /* Make widget titles white */
   margin: 0 0 20px;
 }
-
-/* Make footer icons white */
 .follow-me-icons {
   font-size: 30px;
 }
-
 .follow-me-icons i {
   float: left;
   margin: 0 10px 0 0;
   color: white !important; /* Force white color on icons */
 }
-
 .follow-me-icons a {
   color: white !important; /* Make icon links white */
 }
-
 .follow-me-icons a:hover {
   color: #ccc !important; /* Light gray on hover */
 }
-
-/* Ensure email link in contact section is white */
 #footer .widget-body p {
   color: white !important;
 }
-
 #footer .widget-body a[href^="mailto"] {
   color: white !important;
 }
-
 #footer .widget-body a[href^="mailto"]:hover {
   color: #ccc !important;
 }
-
-/* Force white on all footer content */
 #footer * {
   color: white !important;
 }
-
 #footer a * {
   color: white !important;
 }
-/* Max page width
-/////////////////////////////////////////////////////////////////////*/
 /* @media (min-width: 1200px) {
   Reduce gaps from the edges for all pages
   .container {
@@ -864,8 +817,6 @@ footer.entry-meta .meta-in {
   width: 100% !important;
   max-width: 100% !important;
 } } */
-
-/* Photo Gallery Styles */
 .photo-gallery {
   display: flex;
   flex-wrap: wrap;
@@ -875,7 +826,6 @@ footer.entry-meta .meta-in {
   gap: 0;
   background: #fff;
 }
-
 .gallery-item {
   flex: 1 0 0;
   min-width: 150px;
@@ -885,7 +835,6 @@ footer.entry-meta .meta-in {
   box-shadow: none;
   aspect-ratio: 4/3; /* Keeps all images the same height, adjust as needed */
 }
-
 .gallery-item img {
   width: 100%;
   height: 100%;
@@ -893,11 +842,9 @@ footer.entry-meta .meta-in {
   display: block;
   transition: transform 0.3s;
 }
-
 .gallery-item:hover img {
   transform: scale(1.05);
 }
-
 .gallery-item .desc {
   position: absolute;
   bottom: 0;
@@ -910,12 +857,9 @@ footer.entry-meta .meta-in {
   text-align: center;
   transition: opacity 0.3s;
 }
-
 .gallery-item:hover .desc {
   opacity: 1;
 }
-
-/* Responsive YouTube video - 70% width, properly sized */
 .video-container {
     position: relative;
     width: 70%; /* Use 70% of container width */
@@ -924,7 +868,6 @@ footer.entry-meta .meta-in {
     padding-bottom: 39.375%; /* 70% × 56.25% = maintains 16:9 aspect ratio */
     margin: 20px 0 20px auto; /* Right-aligned video */
 }
-
 .video-container iframe {
     position: absolute;
     top: 0;
@@ -932,7 +875,6 @@ footer.entry-meta .meta-in {
     width: 100%;
     height: 100%;
 }
-
 body {
   overflow-x: hidden;
 }
@@ -944,34 +886,25 @@ body {
   width: 100% !important;
   max-width: 100% !important;
 }
-
-/* Make project images taller in the grid */
 .thumbnails .img {
   height: 300px;         /* Increase this value for more height */
   overflow: hidden;
   display: block;
 }
-
 .thumbnails .img img {
   height: 100%;
   width: 100%;
   object-fit: cover;     /* Ensures the image fills the area and is cropped if needed */
   display: block;
 }
-
-/* Make STEMSpire image zoom out to fit better */
 .thumbnails .img img[src*="stemspire.jpeg"] {
   object-fit: contain !important;  /* Shows full image, may have letterboxing */
   object-position: center;
 }
-
-/* Alternative: Scale down the image */
 .thumbnails .img img[src*="stemspire.jpeg"] {
   transform: scale(0.8);  /* Makes image 80% of original size */
   object-fit: cover;
 }
-
-/* Center title and profile image only on projects page */
 .projects #head .title {
   text-align: center !important;
   background: none !important;
@@ -979,49 +912,36 @@ body {
   border-radius: 0 !important;
   color: black !important;
 }
-
 .projects #head .tagline {
   background: none !important;
   padding: 0 !important;
   border-radius: 0 !important;
   color: black !important;
 }
-
 .projects #head #logo {
   text-align: center !important;
 }
-
 .projects #head img.img-circle {
   margin: 0 auto !important; /* Center the circular image */
   display: block;
 }
-
-/* Header image for projects page */
 .projects #head {
   background: #f4f4f4 url(../images/black.jpeg) center center !important;
   background-size: cover !important;
   background-attachment: fixed !important;
   padding: 80px 0 90px 0; /* Adjust height as needed */
 }
-
-/* Make tagline links black too */
 .projects #head .tagline a {
   color: black !important;
 }
-
-/* Global dark theme - black backgrounds, white text */
 body {
   background-color: black !important;
   color: white !important;
 }
-
-/* Main content areas */
 #main {
   background-color: black !important;
   color: white !important;
 }
-
-/* Much more pronounced gradient transition from header to content */
 #main {
   background: linear-gradient(to bottom, 
     rgba(0,0,0,0) 0%,           /* Completely transparent at top */
@@ -1048,8 +968,6 @@ body {
   min-height: 150vh; /* Make gradient cover more area */
   padding-top: 100px; /* Extra space for seamless transition */
 }
-
-/* Extended and more pronounced header gradient overlay */
 #head::after {
   content: '';
   position: absolute;
@@ -1074,20 +992,14 @@ body {
   pointer-events: none;
   z-index: 1;
 }
-
-/* Ensure header content stays above gradient */
 #head .projects-button-container {
   position: relative;
   z-index: 2;
 }
-
-/* Make the gradient start higher up */
 #head {
   position: relative;
   overflow: hidden;
 }
-
-/* Additional overlay for even smoother transition */
 #main::before {
   content: '';
   position: absolute;
@@ -1102,25 +1014,18 @@ body {
   z-index: 0;
   pointer-events: none;
 }
-
-/* Ensure main content is above the overlay */
 #main .container {
   position: relative;
   z-index: 2;
 }
-
-/* Override any other button styles that might interfere */
 .projects-button-container .btn-primary {
     color: black !important;
 }
-
 .projects-button-container .btn-primary:hover,
 .projects-button-container .btn-primary:focus,
 .projects-button-container .btn-primary:active {
     color: black !important;
 }
-
-/* Subtle glow animation for button */
 @keyframes buttonGlow {
   from {
     box-shadow: 
@@ -1139,232 +1044,18 @@ body {
       0 0 14px #fff;
   }
 }
-
-/* Projects button styling - ensure it's below all text */
 .projects-button-container {
-    margin-top: 60px !important; /* Extra space above button */
-    margin-bottom: 60px !important; /* Extra space below button */
+    margin-top: 60px !important; /* Keep space above button */
+    margin-bottom: 20px !important; /* Reduce from 60px to 20px */
     text-align: center;
-    clear: both; /* Ensure it clears any floating elements */
-    position: relative !important; /* Override any absolute positioning */
+    clear: both;
+    position: relative !important;
 }
-
-.projects-button-container .btn {
-    background: white;
-    border: 2px solid white;
-    color: black !important;
-    padding: 20px 40px;
-    font-size: 22px;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    display: inline-block; /* Ensure proper display */
-    
-    /* White neon glow effect */
-    box-shadow: 
-        0 0 2px #fff,
-        0 0 4px #fff,
-        0 0 6px #fff,
-        0 0 8px #fff,
-        0 0 12px #fff;
+#footer.topspace {
+    margin-top: 20px !important; /* Reduce from default spacing */
+    padding-top: 20px !important;
 }
-
-.projects-button-container .btn:hover {
-    background-color: rgba(255, 255, 255, 0.9);
-    transform: scale(1.05);
-    text-decoration: none;
-    color: black !important;
-    
-    /* Enhanced glow on hover */
-    box-shadow: 
-        0 0 4px #fff,
-        0 0 8px #fff,
-        0 0 12px #fff,
-        0 0 16px #fff,
-        0 0 20px #fff;
-}
-
-/* Override any positioning conflicts */
-.maincontent {
-    margin-bottom: 60px !important; /* Ensure text has bottom margin */
-}
-
-/* Remove any absolute positioning from button */
-.projects-button-container {
-    position: static !important;
-    bottom: auto !important;
-    left: auto !important;
-    transform: none !important;
-}
-
-/* Scroll-triggered text animation - slower fly away */
-.scroll-text {
-  position: fixed;
-  top: 65%;
-  left: 50%;
-  transform: translateX(-50%) translateY(100px); /* Start from below */
-  font-family: Alice, Georgia, serif;
-  font-size: 80px;
-  font-weight: bold;
-  color: white;
-  opacity: 0; /* Start invisible */
-  transition: all 2.0s cubic-bezier(0.19, 1, 0.22, 1); /* More dramatic slow-out effect */
-  z-index: 10;
-  pointer-events: none;
-  
-  /* Subtle glow */
-  text-shadow: 
-    0 0 2px #fff,
-    0 0 4px #fff,
-    0 0 6px #fff;
-}
-
-/* Animate in after delay */
-.scroll-text.animate-in {
-  opacity: 1;
-  transform: translateX(-50%) translateY(-65%);
-}
-
-.scroll-text.fly-up {
-  transform: translateX(-50%) translateY(-300px);
-  opacity: 0;
-}
-
-/* Only show on home page */
-body:not(.home) .scroll-text {
-  display: none;
-}
-
-/* Projects page header styling with pure white text */
-.projects #header {
-  background-color: black !important;
-  color: #ffffff !important;
-  padding: 60px 0;
-}
-
-.projects #head {
-  background-color: black !important;
-}
-
-.projects #logo {
-  text-align: center;
-  margin: 0;
-}
-
-.projects #logo .title {
-  display: block;
-  font-family: Alice, Georgia, serif;
-  font-size: 48px;
-  font-weight: bold;
-  color: #ffffff !important;
-  margin: 20px 0 10px 0;
-  
-  /* Same neon glow effect as index page */
-  text-shadow: 
-    0 0 2px #fff,
-    0 0 4px #fff,
-    0 0 6px #fff;
-}
-
-.projects #logo .tagline {
-  display: block;
-  font-size: 16px;
-  color: #ffffff !important;
-  line-height: 1.4;
-}
-
-.projects #logo .tagline a {
-  color: #ffffff !important;
-  text-decoration: none;
-}
-
-.projects #logo .tagline a:hover {
-  color: #ffffff !important;
-  text-decoration: underline;
-}
-
-/* Force pure white on all header elements */
-.projects #header *,
-.projects #header a,
-.projects #logo *,
-.projects #logo a {
-  color: #ffffff !important;
-}
-
-/* Override any inherited styles */
-.projects h1,
-.projects .title,
-.projects .tagline,
-.projects .tagline a {
-  color: #ffffff !important;
-}
-
-/* My Projects section title with same neon effect as KARINA KRISHNAN */
-.section-title {
-  text-align: center;
-  margin: 40px 0;
-}
-
-.section-title span {
-  font-family: Alice, Georgia, serif; /* Same font as KARINA KRISHNAN */
-  font-size: 60px; /* Large size like the index page */
-  font-weight: bold;
-  color: white;
-  text-transform: uppercase; /* Keep it all caps */
-  
-  /* Same neon glow effect as index page */
-  text-shadow: 
-    0 0 2px #fff,
-    0 0 4px #fff,
-    0 0 6px #fff;
-    
-  display: block;
-  margin: 0 auto;
-}
-
-/* Make sure it shows properly on projects page */
-.projects .section-title span {
-  font-family: Alice, Georgia, serif;
-  font-size: 60px;
-  font-weight: bold;
-  color: white !important;
-  text-transform: uppercase;
-  
-  /* Same neon glow effect */
-  text-shadow: 
-    0 0 2px #fff,
-    0 0 4px #fff,
-    0 0 6px #fff;
-}
-
-/* Much smaller gradient for projects page */
-.projects #main {
-  background: linear-gradient(to bottom, 
-    rgba(0,0,0,0) 0%,           /* Transparent at top */
-    rgba(0,0,0,0.3) 20%,        /* Light fade */
-    rgba(0,0,0,0.6) 40%,        /* Medium fade */
-    rgba(0,0,0,0.8) 60%,        /* Darker */
-    rgba(0,0,0,1) 80%,          /* Solid black much sooner */
-    rgba(0,0,0,1) 100%          /* Solid black */
-  ) !important;
-  min-height: 60vh !important; /* Much shorter gradient area */
-  padding-top: 40px !important; /* Less padding */
-}
-
-/* Smaller header gradient for projects page */
-.projects #head::after {
-  height: 200px !important; /* Much shorter - was 500px */
-  background: linear-gradient(to bottom, 
-    rgba(0,0,0,0) 0%,
-    rgba(0,0,0,0.2) 30%,
-    rgba(0,0,0,0.5) 60%,
-    rgba(0,0,0,0.8) 90%,
-    rgba(0,0,0,1) 100%
-  ) !important;
-}
-
-/* Remove the additional overlay for projects page */
-.projects #main::before {
-  display: none !important;
+.home #footer.topspace {
+    margin-top: 20px !important;
+    padding-top: 20px !important;
 }
