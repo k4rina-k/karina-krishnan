@@ -790,40 +790,62 @@ footer.entry-meta .meta-in {
   padding: 30px 0 0 0;
   font-size: 12px;
 }
+
 #footer a {
-  color: #ccc;
+  color: white !important; /* Make all footer links white */
 }
+
 #footer a:hover {
-  color: #fff;
+  color: #ccc !important; /* Light gray on hover */
 }
+
 #footer h3.widget-title {
   font-size: 15px;
   font-size: 0.9375rem;
   text-transform: uppercase;
-  color: #ccc;
+  color: white !important; /* Make widget titles white */
   margin: 0 0 20px;
 }
-#underfooter {
-  background: #191919;
-  padding: 15px 0;
-  color: #777;
-  font-size: 12px;
-}
-#underfooter a {
-  color: #aaa;
-}
-#underfooter a:hover {
-  color: #fff;
-}
-#underfooter p {
-  margin: 0;
-}
+
+/* Make footer icons white */
 .follow-me-icons {
   font-size: 30px;
 }
+
 .follow-me-icons i {
   float: left;
   margin: 0 10px 0 0;
+  color: white !important; /* Force white color on icons */
+}
+
+.follow-me-icons a {
+  color: white !important; /* Make icon links white */
+}
+
+.follow-me-icons a:hover {
+  color: #ccc !important; /* Light gray on hover */
+}
+
+/* Ensure email link in contact section is white */
+#footer .widget-body p {
+  color: white !important;
+}
+
+#footer .widget-body a[href^="mailto"] {
+  color: white !important;
+}
+
+#footer .widget-body a[href^="mailto"]:hover {
+  color: #ccc !important;
+}
+
+/* Force white on all footer content */
+#footer * {
+  color: white !important;
+}
+
+#footer a * {
+  color: white !important;
 }
 /* Max page width
 /////////////////////////////////////////////////////////////////////*/
