@@ -1340,3 +1340,30 @@ body:not(.home) .scroll-text {
     margin-top: 0 !important;
     padding-top: 0 !important;
 }
+
+/* Projects page header - make emails white */
+.projects #logo .tagline a {
+  color: #ffffff !important;
+  text-decoration: none;
+}
+
+.projects #logo .tagline a:hover {
+  color: #ffffff !important;
+  text-decoration: underline;
+}
+
+/* Force all tagline content to be white */
+.projects #logo .tagline {
+  display: block;
+  font-size: 16px;
+  color: #ffffff !important;
+  line-height: 1.4;
+  background: none !important;
+  padding: 0 !important;
+}
+
+/* Ensure all text in tagline is white */
+.projects #logo .tagline,
+.projects #logo .tagline a {
+  color: #ffffff !important;
+}
