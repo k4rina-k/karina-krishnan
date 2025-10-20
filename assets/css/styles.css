@@ -1200,3 +1200,56 @@ body {
   display: block;
   margin: 0 auto;
 }
+
+/* Scroll-triggered text animation - KARINA KRISHNAN on index page */
+.scroll-text {
+  position: fixed;
+  top: 65%;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  font-family: Alice, Georgia, serif;
+  font-size: 80px;
+  font-weight: bold;
+  color: white;
+  opacity: 0;
+  transition: all 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: 10;
+  pointer-events: none;
+  
+  /* Neon glow effect */
+  text-shadow: 
+    0 0 2px #fff,
+    0 0 4px #fff,
+    0 0 6px #fff;
+}
+
+/* Animate in after delay */
+.scroll-text.animate-in {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-65%);
+}
+
+/* Fly up and disappear temporarily */
+.scroll-text.fly-up {
+  transform: translateX(-50%) translateY(-300px);
+  opacity: 0;
+}
+
+/* Fixed above main content when scrolled */
+.scroll-text.stay-above {
+  opacity: 1;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(0);
+  font-size: 40px; /* Smaller when fixed */
+  position: fixed;
+  z-index: 100;
+  background: rgba(0,0,0,0.8); /* Semi-transparent background */
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+/* Only show on home page */
+body:not(.home) .scroll-text {
+  display: none;
+}

@@ -128,12 +128,17 @@ window.addEventListener('scroll', function() {
   const scrollY = window.pageYOffset;
   const nameText = document.getElementById('scroll-name');
   
-  // Move text to above main content when scrolling past certain point
-  if (scrollY > 150) {
+  // When scrolled past a certain point, fix it above main content
+  if (scrollY > 300) {
     nameText.classList.add('stay-above');
-    nameText.classList.remove('animate-in');
+    nameText.classList.remove('animate-in', 'fly-up');
+  } else if (scrollY > 150) {
+    // Transition phase - fly up and hide
+    nameText.classList.add('fly-up');
+    nameText.classList.remove('animate-in', 'stay-above');
   } else {
-    nameText.classList.remove('stay-above');
+    // Back to original position
+    nameText.classList.remove('stay-above', 'fly-up');
     nameText.classList.add('animate-in');
   }
 });
