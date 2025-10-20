@@ -420,13 +420,14 @@ img {
   display: block;
   overflow: hidden;
   transition: all 0.3s ease;
-  border-radius: 8px; /* Add slight rounding for better neon effect */
+  border-radius: 8px; /* Rounded corners for better glow effect */
 }
 .thumbnail img {
   width: 100%;
   height: auto;
   transition: all 0.5s ease;
-  border-radius: 8px; /* Match the container rounding */
+  border-radius: 8px; /* Match the container */
+  display: block; /* Remove any gaps */
 }
 
 /* Remove the old cover effect */
@@ -437,44 +438,36 @@ img {
 /* White neon glow ALL AROUND the image on hover */
 .thumbnail:hover .img {
   box-shadow: 
-    0 0 8px #fff,
-    0 0 16px #fff,
-    0 0 24px #fff,
-    0 0 32px #fff;
+    0 0 10px #fff,   /* Inner glow */
+    0 0 20px #fff,   /* Medium glow */
+    0 0 30px #fff,   /* Outer glow */
+    0 0 40px #fff;   /* Extended glow */
   transform: scale(1.02);
 }
 
 .thumbnail:hover img {
   /* Blur the image on hover */
   filter: blur(3px);
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
-/* Learn More button that appears on hover */
+/* Learn More button */
 .thumbnail::after {
   content: "Learn More";
   position: absolute;
-  top: 40%; /* Position over the image area */
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  
-  /* Same styling as homepage button */
   background: white;
   border: 2px solid white;
   color: black;
-  padding: 15px 25px;
-  font-size: 16px;
+  padding: 12px 20px;
+  font-size: 14px;
   font-weight: bold;
-  border-radius: 8px;
-  
-  /* Button glow effect */
+  border-radius: 6px;
   box-shadow: 
-    0 0 2px #fff,
-    0 0 4px #fff,
-    0 0 6px #fff,
-    0 0 8px #fff;
-    
-  /* Hidden by default */
+    0 0 5px #fff,
+    0 0 10px #fff;
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease;
@@ -483,7 +476,6 @@ img {
 }
 
 .thumbnail:hover::after {
-  /* Show button on hover */
   opacity: 1;
   visibility: visible;
 }
@@ -1165,11 +1157,6 @@ body:not(.home) .scroll-text {
   line-height: 1.4;
   background: none !important;
   padding: 0 !important;
-}
-
-.projects #logo .tagline a {
-  color: #ffffff !important;
-  text-decoration: none;
 }
 
 /* Projects button styling - white button with black text and neon glow */
