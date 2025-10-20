@@ -415,6 +415,16 @@ img {
   overflow: hidden;
   transition: all 0.3s ease;
 }
+
+/* Project thumbnail hover effects - neon glow all around image */
+.thumbnail {
+  position: relative;
+  border: none;
+  background: none;
+  text-decoration: none !important;
+  overflow: visible; /* Allow glow to show outside bounds */
+}
+
 .thumbnail .img {
   position: relative;
   display: block;
@@ -422,17 +432,13 @@ img {
   transition: all 0.3s ease;
   border-radius: 8px; /* Rounded corners for better glow effect */
 }
+
 .thumbnail img {
   width: 100%;
   height: auto;
   transition: all 0.5s ease;
   border-radius: 8px; /* Match the container */
   display: block; /* Remove any gaps */
-}
-
-/* Remove the old cover effect */
-.thumbnail .cover {
-  display: none;
 }
 
 /* White neon glow ALL AROUND the image on hover */
@@ -446,7 +452,6 @@ img {
 }
 
 .thumbnail:hover img {
-  /* Blur the image on hover */
   filter: blur(3px);
   transform: scale(1.05);
 }
