@@ -1256,3 +1256,41 @@ body:not(.home) .scroll-text {
 .projects .tagline a {
   color: #ffffff !important;
 }
+
+/* My Projects section title with same neon effect as KARINA KRISHNAN */
+.section-title {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.section-title span {
+  font-family: Alice, Georgia, serif; /* Same font as KARINA KRISHNAN */
+  font-size: 60px; /* Large size like the index page */
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase; /* Keep it all caps */
+  
+  /* Same neon glow effect as index page */
+  text-shadow: 
+    0 0 2px #fff,
+    0 0 4px #fff,
+    0 0 6px #fff;
+    
+  display: block;
+  margin: 0 auto;
+}
+
+/* Make sure it shows properly on projects page */
+.projects .section-title span {
+  font-family: Alice, Georgia, serif;
+  font-size: 60px;
+  font-weight: bold;
+  color: white !important;
+  text-transform: uppercase;
+  
+  /* Same neon glow effect */
+  text-shadow: 
+    0 0 2px #fff,
+    0 0 4px #fff,
+    0 0 6px #fff;
+}
