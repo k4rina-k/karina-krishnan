@@ -123,16 +123,16 @@ window.addEventListener('load', function() {
   }, 300); // 0.3 second delay
 });
 
-// Scroll-triggered text animation - becomes static above main content
+// Scroll-triggered text animation - moves above main content then becomes scrollable
 window.addEventListener('scroll', function() {
   const scrollY = window.pageYOffset;
   const nameText = document.getElementById('scroll-name');
   
-  // When scrolled past certain point, make it static above main content
-  if (scrollY > 300) {
+  // When scrolled past certain point, move above main content (static/scrollable)
+  if (scrollY > 250) {
     nameText.classList.add('static-above');
     nameText.classList.remove('animate-in', 'fly-up');
-  } else if (scrollY > 150) {
+  } else if (scrollY > 120) {
     // Transition phase - fly up and hide temporarily
     nameText.classList.add('fly-up');
     nameText.classList.remove('animate-in', 'static-above');
