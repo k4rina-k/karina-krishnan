@@ -1193,10 +1193,10 @@ body:not(.home) .scroll-text {
   display: none;
 }
 
-/* Projects page header styling with white text and neon effect */
+/* Projects page header styling with pure white text */
 .projects #header {
   background-color: black !important;
-  color: white !important;
+  color: #ffffff !important;
   padding: 60px 0;
 }
 
@@ -1214,7 +1214,7 @@ body:not(.home) .scroll-text {
   font-family: Alice, Georgia, serif;
   font-size: 48px;
   font-weight: bold;
-  color: white !important;
+  color: #ffffff !important;
   margin: 20px 0 10px 0;
   
   /* Same neon glow effect as index page */
@@ -1227,30 +1227,32 @@ body:not(.home) .scroll-text {
 .projects #logo .tagline {
   display: block;
   font-size: 16px;
-  color: white !important;
+  color: #ffffff !important;
   line-height: 1.4;
 }
 
 .projects #logo .tagline a {
-  color: white !important;
+  color: #ffffff !important;
   text-decoration: none;
 }
 
 .projects #logo .tagline a:hover {
-  color: rgba(255, 255, 255, 0.8) !important;
+  color: #ffffff !important;
   text-decoration: underline;
 }
 
-/* Style the profile image */
-.projects #logo img {
-  width: 150px;
-  height: 150px;
-  border: 3px solid white;
-  margin-bottom: 20px;
-  border-radius: 50%;
+/* Force pure white on all header elements */
+.projects #header *,
+.projects #header a,
+.projects #logo *,
+.projects #logo a {
+  color: #ffffff !important;
 }
 
-/* Force white text on all header elements */
-.projects #header * {
-  color: white !important;
+/* Override any inherited styles */
+.projects h1,
+.projects .title,
+.projects .tagline,
+.projects .tagline a {
+  color: #ffffff !important;
 }
