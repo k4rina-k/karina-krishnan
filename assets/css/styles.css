@@ -902,7 +902,7 @@ footer.entry-meta .meta-in {
     text-align: center;
     margin-bottom: 20px; /* Space below text, above video */
     font-family: Alice, Georgia, serif; /* Same font as KARINA KRISHNAN */
-    font-size: 36px; /* Larger than button text (was 22px) */
+    font-size: 45px; /* Much bigger - was 36px */
     font-weight: bold;
     color: white;
     text-transform: uppercase;
@@ -1379,9 +1379,9 @@ link[rel="icon"] {
 img[src*="KK.png"] {
   width: auto !important;
   height: auto !important;
-  max-width: 32px; /* Standard favicon size */
-  max-height: 32px;
-  object-fit: contain; /* Preserve aspect ratio */
+  max-width: 64px;
+  max-height: 64px;
+  object-fit: contain !important;
 }
 
 /* For any logo images in the header */
@@ -1392,4 +1392,32 @@ img[src*="KK.png"] {
   object-fit: contain !important;
   max-width: 100px; /* Adjust as needed */
   max-height: 100px; /* Adjust as needed */
+}
+
+/* Fix KK.png favicon - proper size and shape */
+link[rel="shortcut icon"] {
+  width: 32px !important;
+  height: 32px !important;
+}
+
+/* Revert guy.jpg image to original size in projects header */
+.projects #logo img {
+    width: auto !important;
+    height: auto !important;
+    max-width: none !important;
+    max-height: none !important;
+    object-fit: initial !important;
+}
+
+/* Or if you want to specify the original size */
+.projects #logo .img-circle {
+    width: 140px !important;  /* Original size */
+    height: 140px !important; /* Original size */
+    object-fit: cover !important;
+}
+
+/* Remove any constraints that were making it smaller */
+.projects #logo img.img-circle {
+    max-width: 140px !important;
+    max-height: 140px !important;
 }
