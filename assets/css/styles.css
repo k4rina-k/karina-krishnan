@@ -1131,15 +1131,15 @@ body {
 /* Scroll-triggered text animation - KARINA KRISHNAN on index page */
 .scroll-text {
   position: fixed;
-  top: 65%; /* Position lower on screen */
+  top: 65%;
   left: 50%;
-  transform: translateX(-50%) translateY(100px); /* Start from below */
+  transform: translateX(-50%) translateY(100px);
   font-family: Alice, Georgia, serif;
   font-size: 80px;
   font-weight: bold;
   color: white;
-  opacity: 0; /* Start invisible */
-  transition: all 2.0s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Slow transition */
+  opacity: 0;
+  transition: all 2.0s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   z-index: 10;
   pointer-events: none;
   
@@ -1153,271 +1153,20 @@ body {
 /* Animate in after delay */
 .scroll-text.animate-in {
   opacity: 1;
-  transform: translateX(-50%) translateY(-65%); /* Fly to center position */
+  transform: translateX(-50%) translateY(-65%);
 }
 
-.scroll-text.fly-up {
-  transform: translateX(-50%) translateY(-300px); /* Fly higher and out */
-  opacity: 0;
+/* Stay above main content when scrolling */
+.scroll-text.stay-above {
+  opacity: 1;
+  top: 120px; /* Position above main content */
+  transform: translateX(-50%) translateY(0);
+  font-size: 60px; /* Slightly smaller when positioned above */
+  position: fixed;
+  z-index: 100;
 }
 
 /* Only show on home page */
 body:not(.home) .scroll-text {
   display: none;
-}
-
-/* Projects page header styling with white text and neon effect */
-.projects #header {
-  background-color: black !important;
-  color: #ffffff !important;
-  padding: 60px 0;
-}
-
-.projects #head {
-  background-color: black !important;
-}
-
-.projects #logo .title {
-  display: block;
-  font-family: Alice, Georgia, serif;
-  font-size: 48px;
-  font-weight: bold;
-  color: #ffffff !important;
-  margin: 20px 0 10px 0;
-  background: none !important;
-  padding: 0 !important;
-  
-  /* Same neon glow effect as index page */
-  text-shadow: 
-    0 0 2px #fff,
-    0 0 4px #fff,
-    0 0 6px #fff;
-}
-
-.projects #logo .tagline {
-  display: block;
-  font-size: 16px;
-  color: #ffffff !important;
-  line-height: 1.4;
-  background: none !important;
-  padding: 0 !important;
-}
-
-/* Projects button styling - white button with black text and neon glow */
-.projects-button-container {
-    margin-top: 60px !important;
-    margin-bottom: 10px !important;
-    text-align: center;
-    clear: both;
-    position: relative !important;
-}
-
-.projects-button-container .btn {
-    background: white !important;
-    border: 2px solid white !important;
-    color: black !important;
-    padding: 20px 40px;
-    font-size: 22px;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    display: inline-block;
-    
-    /* White neon glow effect */
-    box-shadow: 
-        0 0 2px #fff,
-        0 0 4px #fff,
-        0 0 6px #fff,
-        0 0 8px #fff,
-        0 0 12px #fff;
-}
-
-.projects-button-container .btn:hover {
-    background-color: rgba(255, 255, 255, 0.9) !important;
-    transform: scale(1.05);
-    text-decoration: none;
-    color: black !important;
-    
-    /* Enhanced glow on hover */
-    box-shadow: 
-        0 0 4px #fff,
-        0 0 8px #fff,
-        0 0 12px #fff,
-        0 0 16px #fff,
-        0 0 20px #fff;
-}
-
-.projects-button-container .btn-primary {
-    color: black !important;
-}
-
-.projects-button-container .btn-primary:hover,
-.projects-button-container .btn-primary:focus,
-.projects-button-container .btn-primary:active {
-    color: black !important;
-}
-
-/* MY PROJECTS section title with same neon effect as KARINA KRISHNAN */
-.section-title span {
-  font-family: Alice, Georgia, serif;
-  font-size: 60px;
-  font-weight: bold;
-  color: white !important;
-  text-transform: uppercase;
-  
-  /* Same neon glow effect as index page */
-  text-shadow: 
-    0 0 2px #fff,
-    0 0 4px #fff,
-    0 0 6px #fff;
-    
-  display: block;
-  margin: 0 auto;
-}
-
-/* Bigger text for index page */
-.big-text {
-    font-size: 1.4em !important;
-    line-height: 1.6;
-}
-
-/* Much smaller gradient for projects page */
-.projects #main {
-  background: linear-gradient(to bottom, 
-    rgba(0,0,0,0) 0%,           /* Transparent at top */
-    rgba(0,0,0,0.3) 20%,        /* Light fade */
-    rgba(0,0,0,0.6) 40%,        /* Medium fade */
-    rgba(0,0,0,0.8) 60%,        /* Darker */
-    rgba(0,0,0,1) 80%,          /* Solid black much sooner */
-    rgba(0,0,0,1) 100%          /* Solid black */
-  ) !important;
-  min-height: 60vh !important; /* Much shorter gradient area */
-  padding-top: 40px !important; /* Less padding */
-}
-
-/* Smaller header gradient for projects page */
-.projects #head::after {
-  height: 200px !important; /* Much shorter - was 500px */
-  background: linear-gradient(to bottom, 
-    rgba(0,0,0,0) 0%,
-    rgba(0,0,0,0.2) 30%,
-    rgba(0,0,0,0.5) 60%,
-    rgba(0,0,0,0.8) 90%,
-    rgba(0,0,0,1) 100%
-  ) !important;
-}
-
-/* Remove the additional overlay for projects page */
-.projects #main::before {
-  display: none !important;
-}
-
-/* Remove gap between header and MY PROJECTS section */
-.projects .section.recentworks.topspace {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-}
-
-/* Move MY PROJECTS closer to header */
-.projects .section-title {
-    margin-top: 0 !important;
-    margin-bottom: 40px;
-    padding-top: 20px; /* Small padding from header */
-}
-
-/* Ensure no extra spacing on projects page */
-.projects #main {
-    padding-top: 0 !important;
-}
-
-.projects #main .container {
-    padding-top: 0 !important;
-}
-
-/* Remove any default topspace class margins for projects page */
-.projects .topspace {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-}
-
-/* Projects page header - make emails white */
-.projects #logo .tagline a {
-  color: #ffffff !important;
-  text-decoration: none;
-}
-
-.projects #logo .tagline a:hover {
-  color: #ffffff !important;
-  text-decoration: underline;
-}
-
-/* Force all tagline content to be white */
-.projects #logo .tagline {
-  display: block;
-  font-size: 16px;
-  color: #ffffff !important;
-  line-height: 1.4;
-  background: none !important;
-  padding: 0 !important;
-}
-
-/* Ensure all text in tagline is white */
-.projects #logo .tagline,
-.projects #logo .tagline a {
-  color: #ffffff !important;
-}
-
-/* Fix favicon/icon display - prevent squishing */
-link[rel="shortcut icon"],
-link[rel="icon"] {
-  width: auto !important;
-  height: auto !important;
-}
-
-/* If the icon appears in the page content, fix its aspect ratio */
-img[src*="KK.png"] {
-  width: auto !important;
-  height: auto !important;
-  max-width: 64px;
-  max-height: 64px;
-  object-fit: contain !important;
-}
-
-/* For any logo images in the header */
-#logo img,
-.logo img {
-  width: auto !important;
-  height: auto !important;
-  object-fit: contain !important;
-  max-width: 100px; /* Adjust as needed */
-  max-height: 100px; /* Adjust as needed */
-}
-
-/* Fix KK.png favicon - proper size and shape */
-link[rel="shortcut icon"] {
-  width: 32px !important;
-  height: 32px !important;
-}
-
-/* Revert guy.jpg image to original size in projects header */
-.projects #logo img {
-    width: auto !important;
-    height: auto !important;
-    max-width: none !important;
-    max-height: none !important;
-    object-fit: initial !important;
-}
-
-/* Or if you want to specify the original size */
-.projects #logo .img-circle {
-    width: 140px !important;  /* Original size */
-    height: 140px !important; /* Original size */
-    object-fit: cover !important;
-}
-
-/* Remove any constraints that were making it smaller */
-.projects #logo img.img-circle {
-    max-width: 140px !important;
-    max-height: 140px !important;
 }
