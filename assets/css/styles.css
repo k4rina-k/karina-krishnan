@@ -1310,3 +1310,34 @@ body:not(.home) .scroll-text {
     0 0 4px #fff,
     0 0 6px #fff;
 }
+
+/* Much smaller gradient for projects page */
+.projects #main {
+  background: linear-gradient(to bottom, 
+    rgba(0,0,0,0) 0%,           /* Transparent at top */
+    rgba(0,0,0,0.3) 20%,        /* Light fade */
+    rgba(0,0,0,0.6) 40%,        /* Medium fade */
+    rgba(0,0,0,0.8) 60%,        /* Darker */
+    rgba(0,0,0,1) 80%,          /* Solid black much sooner */
+    rgba(0,0,0,1) 100%          /* Solid black */
+  ) !important;
+  min-height: 60vh !important; /* Much shorter gradient area */
+  padding-top: 40px !important; /* Less padding */
+}
+
+/* Smaller header gradient for projects page */
+.projects #head::after {
+  height: 200px !important; /* Much shorter - was 500px */
+  background: linear-gradient(to bottom, 
+    rgba(0,0,0,0) 0%,
+    rgba(0,0,0,0.2) 30%,
+    rgba(0,0,0,0.5) 60%,
+    rgba(0,0,0,0.8) 90%,
+    rgba(0,0,0,1) 100%
+  ) !important;
+}
+
+/* Remove the additional overlay for projects page */
+.projects #main::before {
+  display: none !important;
+}
