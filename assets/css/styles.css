@@ -425,38 +425,22 @@ img {
   transition: all 0.3s ease;
 }
 .thumbnail .img {
-  display: block;
-  width: 100%;
-  overflow: hidden;
-  height: 300px;
-  margin: 0 0 20px;
   position: relative;
+  display: block;
+  overflow: hidden;
+  transition: all 0.3s ease;
 }
 .thumbnail img {
   width: 100%;
   height: auto;
   transition: all 0.5s ease;
 }
-.thumbnail .title {
-  display: block;
-  text-align: center;
-  margin-top: 15px;
-  font-size: 16px;
-  font-weight: bold;
-  color: white;
-  text-decoration: none;
-}
-.thumbnail:hover .title {
-  color: white;
-  text-decoration: none;
-}
 /* Remove the old cover effect */
 .thumbnail .cover {
   display: none;
 }
-/* New hover effects */
-.thumbnail:hover {
-  /* White neon glow around the entire thumbnail */
+/* White neon glow only around the IMAGE on hover */
+.thumbnail:hover .img {
   box-shadow: 
     0 0 8px #fff,
     0 0 16px #fff,
@@ -473,7 +457,7 @@ img {
 .thumbnail::after {
   content: "Learn More";
   position: absolute;
-  top: 50%;
+  top: 40%; /* Position over the image area */
   left: 50%;
   transform: translate(-50%, -50%);
   
@@ -504,6 +488,27 @@ img {
   /* Show button on hover */
   opacity: 1;
   visibility: visible;
+}
+/* Project title styling - remove underline */
+.thumbnail .title {
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none !important;
+  transition: all 0.3s ease;
+}
+.thumbnail:hover .title {
+  color: white !important;
+  text-decoration: none !important;
+  
+  /* Add neon glow to text on hover */
+  text-shadow: 
+    0 0 2px #fff,
+    0 0 4px #fff,
+    0 0 6px #fff;
 }
 /* pagination */
 .pagination > li > a {
