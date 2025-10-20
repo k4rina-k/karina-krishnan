@@ -1068,18 +1068,18 @@ body {
 }
 .projects-button-container {
     margin-top: 60px !important; /* Keep space above button */
-    margin-bottom: 20px !important; /* Reduce from 60px to 20px */
+    margin-bottom: 10px !important; /* Much smaller bottom margin */
     text-align: center;
     clear: both;
     position: relative !important;
 }
 #footer.topspace {
-    margin-top: 20px !important; /* Reduce from default spacing */
-    padding-top: 20px !important;
+    margin-top: 10px !important; /* Reduce from default spacing */
+    padding-top: 15px !important; /* Smaller padding */
 }
 .home #footer.topspace {
-    margin-top: 20px !important;
-    padding-top: 20px !important;
+    margin-top: 10px !important;
+    padding-top: 15px !important;
 }
 /* Scroll-triggered text animation - KARINA KRISHNAN on index page */
 .scroll-text {
@@ -1164,7 +1164,7 @@ body:not(.home) .scroll-text {
 /* Projects button styling - white button with black text and neon glow */
 .projects-button-container {
     margin-top: 60px !important;
-    margin-bottom: 20px !important;
+    margin-bottom: 10px !important;
     text-align: center;
     clear: both;
     position: relative !important;
@@ -1238,4 +1238,63 @@ body:not(.home) .scroll-text {
 .big-text {
     font-size: 1.4em !important;
     line-height: 1.6;
+}
+
+/* Much smaller gradient for projects page */
+.projects #main {
+  background: linear-gradient(to bottom, 
+    rgba(0,0,0,0) 0%,           /* Transparent at top */
+    rgba(0,0,0,0.3) 20%,        /* Light fade */
+    rgba(0,0,0,0.6) 40%,        /* Medium fade */
+    rgba(0,0,0,0.8) 60%,        /* Darker */
+    rgba(0,0,0,1) 80%,          /* Solid black much sooner */
+    rgba(0,0,0,1) 100%          /* Solid black */
+  ) !important;
+  min-height: 60vh !important; /* Much shorter gradient area */
+  padding-top: 40px !important; /* Less padding */
+}
+
+/* Smaller header gradient for projects page */
+.projects #head::after {
+  height: 200px !important; /* Much shorter - was 500px */
+  background: linear-gradient(to bottom, 
+    rgba(0,0,0,0) 0%,
+    rgba(0,0,0,0.2) 30%,
+    rgba(0,0,0,0.5) 60%,
+    rgba(0,0,0,0.8) 90%,
+    rgba(0,0,0,1) 100%
+  ) !important;
+}
+
+/* Remove the additional overlay for projects page */
+.projects #main::before {
+  display: none !important;
+}
+
+/* Remove gap between header and MY PROJECTS section */
+.projects .section.recentworks.topspace {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+/* Move MY PROJECTS closer to header */
+.projects .section-title {
+    margin-top: 0 !important;
+    margin-bottom: 40px;
+    padding-top: 20px; /* Small padding from header */
+}
+
+/* Ensure no extra spacing on projects page */
+.projects #main {
+    padding-top: 0 !important;
+}
+
+.projects #main .container {
+    padding-top: 0 !important;
+}
+
+/* Remove any default topspace class margins for projects page */
+.projects .topspace {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
 }
