@@ -897,12 +897,12 @@ footer.entry-meta .meta-in {
     border-radius: 8px;
 }
 
-/* Meet Me text under video */
+/* Meet Me text above video - larger size */
 .meet-me-text {
     text-align: center;
-    margin-top: 20px;
+    margin-bottom: 20px; /* Space below text, above video */
     font-family: Alice, Georgia, serif; /* Same font as KARINA KRISHNAN */
-    font-size: 22px; /* Same size as button text */
+    font-size: 28px; /* Larger than button text (was 22px) */
     font-weight: bold;
     color: white;
     text-transform: uppercase;
