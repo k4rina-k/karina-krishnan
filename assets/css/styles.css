@@ -1471,3 +1471,26 @@ img[src*="KK.png"] {
     opacity: 1;
   }
 }
+
+/* Static KARINA KRISHNAN above main text - identical to animated version */
+.static-name-text {
+  font-family: Alice, Georgia, serif;
+  font-size: 80px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  margin: 40px 0 30px 0;
+  
+  /* Same neon glow effect as the animated version */
+  text-shadow: 
+    0 0 1px #fff,
+    0 0 2px #fff;
+}
+
+/* Responsive sizing for mobile */
+@media (max-width: 768px) {
+  .static-name-text {
+    font-size: 50px;
+    margin: 20px 0 15px 0;
+  }
+}

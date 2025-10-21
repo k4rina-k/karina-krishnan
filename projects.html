@@ -190,6 +190,33 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 <script src="assets/js/template.js"></script>
+
+<script>
+// Scroll-triggered animations for projects page
+document.addEventListener('DOMContentLoaded', function() {
+    // Add scroll-animate class to elements that should animate on scroll
+    const animateOnScroll = document.querySelectorAll('.recentworks .thumbnail, .section-title');
+    
+    // Intersection Observer for scroll animations
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '50px'
+    });
+
+    // Observe elements for scroll animations
+    animateOnScroll.forEach(el => {
+        el.classList.add('scroll-animate');
+        observer.observe(el);
+    });
+});
+</script>
+
 </body>
 </html>
 
