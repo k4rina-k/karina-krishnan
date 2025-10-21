@@ -1277,8 +1277,14 @@ body:not(.home) .scroll-text {
 
 /* Fix KK.png favicon - prevent squishing */
 link[rel="shortcut icon"] {
-  width: 16px !important;
-  height: 16px !important;
+  width: 32px !important;
+  height: 32px !important;
+}
+
+/* Alternative favicon formats for better browser support */
+link[rel="icon"] {
+  width: 32px !important;
+  height: 32px !important;
 }
 
 /* If KK.png appears as an actual image element anywhere */
