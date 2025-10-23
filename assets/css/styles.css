@@ -1312,7 +1312,6 @@ img[src*="KK.png"] {
   max-height: none !important;
   width: auto !important;
   height: auto !important;
-  object-fit: contain !important;
 }
 
 /* Remove gap at top of projects page */
@@ -1499,4 +1498,18 @@ img[src*="KK.png"] {
     font-size: 50px;
     margin: 20px 0 15px 0;
   }
+}
+
+/* Force favicon to maintain proper aspect ratio */
+link[rel="shortcut icon"],
+link[rel="icon"] {
+  width: auto !important;
+  height: auto !important;
+}
+
+/* Ensure favicons are not distorted */
+head link[rel="shortcut icon"],
+head link[rel="icon"] {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
 }
