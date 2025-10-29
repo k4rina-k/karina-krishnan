@@ -1500,16 +1500,190 @@ img[src*="KK.png"] {
   }
 }
 
-/* Force favicon to maintain proper aspect ratio */
-link[rel="shortcut icon"],
-link[rel="icon"] {
-  width: auto !important;
-  height: auto !important;
+/* Math Quest page title - centered and same font as KARINA KRISHNAN */
+.math-quest-title {
+  font-family: Alice, Georgia, serif !important;
+  font-size: 60px !important;
+  font-weight: bold !important;
+  color: white !important;
+  text-align: center !important;
+  text-transform: uppercase !important;
+  margin: 30px 0 40px 0 !important;
+  
+  /* Same subtle neon glow */
+  text-shadow: 
+    0 0 1px #fff,
+    0 0 2px #fff;
 }
 
-/* Ensure favicons are not distorted */
-head link[rel="shortcut icon"],
-head link[rel="icon"] {
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
+/* Math Quest image - larger and left-aligned */
+.math-quest-image {
+  max-width: 500px !important; /* Larger than before */
+  width: 100% !important;
+  height: auto !important;
+  border-radius: 8px;
+  margin: 20px 0;
+  float: left !important; /* Float to left */
+  margin-right: 20px !important; /* Space between image and text */
+  margin-bottom: 20px !important;
+}
+
+/* Responsive sizing for mobile */
+@media (max-width: 768px) {
+  .math-quest-title {
+    font-size: 40px !important;
+  }
+  
+  .math-quest-image {
+    max-width: 100% !important;
+    float: none !important; /* Stack on mobile */
+    margin-right: 0 !important;
+  }
+}
+
+/* Timeline Animation Styles - Fixed positioning */
+.timeline-container {
+  margin: 80px 0;
+  padding: 0 20px;
+}
+
+.timeline-title {
+  font-family: Alice, Georgia, serif;
+  font-size: 48px;
+  color: white;
+  text-align: center;
+  margin-bottom: 70px;
+  text-shadow: 0 0 1px #fff, 0 0 2px #fff;
+}
+
+.timeline {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+
+/* Connecting line through circles - perfectly centered */
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 75px; /* Changed from 60px - this centers the line through 30px dots */
+  left: 10%;
+  right: 10%;
+  height: 4px;
+  background: linear-gradient(to right, #fff, #fff);
+  z-index: 1; /* Behind dots */
+  animation: lineGrow 2s ease-out 0.5s both;
+}
+
+.timeline-item {
+  position: relative;
+  flex: 1;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: timelineItemAppear 0.8s ease-out both;
+  z-index: 5; /* Above the line but below dots */
+}
+
+.timeline-item:nth-child(1) { animation-delay: 1s; }
+.timeline-item:nth-child(2) { animation-delay: 1.3s; }
+.timeline-item:nth-child(3) { animation-delay: 1.6s; }
+.timeline-item:nth-child(4) { animation-delay: 1.9s; }
+
+.timeline-dot {
+  width: 30px;
+  height: 30px;
+  background: white;
+  border-radius: 50%;
+  margin: 0 auto 30px;
+  position: relative;
+  z-index: 10; /* Much higher z-index to ensure it's above the line */
+  box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.3);
+  animation: dotPulse 2s infinite ease-in-out;
+}
+
+.timeline-content {
+  background: none !important; /* Remove the glass background */
+  padding: 20px 10px; /* Reduce padding since no background */
+  border-radius: 0; /* Remove rounded corners */
+  border: none !important; /* Remove border */
+  backdrop-filter: none !important; /* Remove blur effect */
+  min-height: auto; /* Remove fixed height */
+}
+
+.timeline-content h3 {
+  font-family: Alice, Georgia, serif;
+  color: white;
+  margin-bottom: 10px; /* Reduce spacing */
+  font-size: 24px;
+}
+
+.timeline-content p {
+  color: #ccc;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Animation keyframes */
+@keyframes lineGrow {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes timelineItemAppear {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes dotPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    transform: scale(1.15);
+    box-shadow: 0 0 0 12px rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .timeline {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .timeline::before {
+    top: 0;
+    left: 50%;
+    right: auto;
+    width: 4px;
+    height: 100%;
+    transform: translateX(-50%);
+  }
+  
+  .timeline-item {
+    margin-bottom: 60px;
+    max-width: 350px;
+  }
+  
+  .timeline-title {
+    font-size: 36px;
+  }
+  
+  .timeline-dot {
+    width: 25px;
+    height: 25px;
+  }
 }
