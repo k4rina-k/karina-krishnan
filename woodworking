@@ -58,18 +58,19 @@
             <!-- Article main content - now full width -->
             <article class="col-sm-12 maincontent">
                 <header class="page-header">
-                    <h1 class="page-title math-quest-title">FIRST ROBOTICS COMPETITION</h1>
+                    <h1 class="page-title math-quest-title">BHS ARTISANAL WOODWORKING</h1>
                 </header>
 
                 <!-- Woodworking content -->
-                <p>I’ve been part of FIRST Robotics Competition Team 695, Bison Robotics, since my freshman year, growing from a fabrication member to Business Captain, Pit-Crew Captain, and Design & CAD Lead. Over the years, I’ve designed critical subsystems, including the 2025 climber, which became the game-winning mechanism that helped us secure a regional victory and qualify for the World Championships. On the engineering side, I’ve learned advanced CAD and mechanical design through SolidWorks, developed custom high-performance motor systems, and led pit operations under intense time pressure to troubleshoot and repair the robot between matches. As Business Captain, I founded and now lead our team’s first-ever Business Subteam, securing over $1,000 in sponsorships, organizing fundraisers, managing outreach, and teaching members how to pitch to potential sponsors. Robotics has taught me not only technical skills but also the leadership, creativity, and perseverance that fuel my passion for engineering and innovation.</p>
+                <p>I co-founded BHS Artisanal Woodworking with the only other female student in my Design & Engineering class, transforming a class project into a sustainable student-run business. After creating an impressive cutting board as a sophomore year final project, we developed a comprehensive business plan covering finances, marketing, and sales strategy, then navigated significant challenges pitching the idea to our school board through multiple presentations and roadblocks. We established the business to design, build, and sell sustainable wooden products, including cutting boards, charcuterie boards, coasters, rustic signs, and engraved cups/mugs with custom options, using 100% wood scraps that would otherwise be discarded from the school's woodshop, making our products essentially pure profit.            The business has grown to involve 15+ students and generated over $3,000 in revenue during its first year from just two school events (Holi festival and Family Kindness Day) plus custom orders. I serve as both Business and Technical Lead, managing the team, finances, marketing, and sales operations, while also coding a full-stack website from scratch using Vue.js, Java, HTML, and CSS to facilitate custom orders online. Currently, all proceeds are reinvested into the Design & Engineering program's curriculum and equipment, but we're expanding to sell at Cleveland-area flea markets and plan to donate half of our future proceeds to STEM for Her, an organization promoting STEM careers for girls and young women, with a goal of raising $10,000. I'm also focused on training underclassmen to continue the business after graduation.</p>
+
             </article>
             <!-- /Article -->
             
             <!-- Return to Projects Button -->
             <div class="row" style="margin-top: 60px; margin-bottom: 40px;">
                 <div class="col-md-12 text-center">
-                    <a href="projects.html" class="btn btn-primary btn-xl">Return to Projects</a>
+                    <a href="projects" class="btn btn-primary btn-xl">Return to Projects</a>
                 </div>
             </div>
 

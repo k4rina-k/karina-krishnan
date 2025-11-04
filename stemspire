@@ -70,7 +70,7 @@ Beyond course content tutoring, I expanded STEMspire to include SAT and ACT test
             <!-- Return to Projects Button -->
             <div class="row" style="margin-top: 60px; margin-bottom: 40px;">
                 <div class="col-md-12 text-center">
-                    <a href="projects.html" class="btn btn-primary btn-xl">Return to Projects</a>
+                    <a href="projects" class="btn btn-primary btn-xl">Return to Projects</a>
                 </div>
             </div>
 

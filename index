@@ -80,7 +80,7 @@
         <!-- Right half - View My Projects Button -->
         <div class="col-md-6 button-vertical-center">
             <div class="projects-button-container">
-                <a href="projects.html" class="btn btn-primary btn-xl">View My Projects</a>
+                <a href="projects" class="btn btn-primary btn-xl">View My Projects</a>
             </div>
         </div>
     </div>
