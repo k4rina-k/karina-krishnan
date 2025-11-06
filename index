@@ -8,12 +8,12 @@
 	
 	<title>Karina Krishnan</title>
 
-	<!-- Replace your existing favicon lines with these cache-busting versions -->
-	<link rel="icon" type="image/png" sizes="16x16" href="assets/images/KK.png?v=3">
-	<link rel="icon" type="image/png" sizes="32x32" href="assets/images/KK.png?v=3">
-	<link rel="icon" type="image/png" sizes="48x48" href="assets/images/KK.png?v=3">
-	<link rel="shortcut icon" href="assets/images/KK.png?v=3" type="image/png">
-	<link rel="apple-touch-icon" sizes="180x180" href="assets/images/KK.png?v=3">
+	<!-- Favicon declarations - properly sized square favicons to prevent squishing -->
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/images/KK_favicon_16.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/images/KK_favicon_32.png">
+	<link rel="icon" type="image/png" sizes="48x48" href="assets/images/KK_favicon_48.png">
+	<link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/images/KK_favicon_256.png">
 	
 	<!-- Bootstrap -->
 	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.no-icons.min.css" rel="stylesheet">

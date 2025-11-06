@@ -1282,44 +1282,31 @@ body:not(.home) .scroll-text {
   min-height: 300px !important; /* Much smaller header */
 }
 
-/* Fix KK.png favicon - prevent squishing */
-link[rel="shortcut icon"] {
-  width: 32px !important;
-  height: 32px !important;
-}
+/* Favicon and image handling */
+/* The main issue: KK.png is 1392x752 (landscape) but favicons need to be square */
+/* Browsers automatically crop/stretch rectangular images to fit square favicon sizes */
 
-/* Alternative favicon formats for better browser support */
-link[rel="icon"] {
-  width: 32px !important;
-  height: 32px !important;
-}
-
-/* If KK.png appears as an actual image element anywhere */
+/* If KK.png appears as an actual image element (not favicon), preserve aspect ratio */
 img[src*="KK.png"] {
   width: auto !important;
   height: auto !important;
-  max-width: 32px !important;
-  max-height: 32px !important;
   object-fit: contain !important;
-  aspect-ratio: 1/1 !important; /* Force square aspect ratio */
+  /* Maintain natural 1392x752 aspect ratio for regular images */
 }
 
-/* Specifically target any logo images that might be getting squished */
+/* Logo images should maintain their natural proportions */
 #logo img[src*="KK.png"],
 .logo img[src*="KK.png"] {
-  width: 32px !important;
-  height: 32px !important;
-  object-fit: contain !important;
-  aspect-ratio: 1/1 !important;
-}
-
-/* Override any existing img styling that might be causing issues */
-img[src*="KK.png"] {
-  max-width: none !important;
-  max-height: none !important;
   width: auto !important;
   height: auto !important;
+  max-width: 100% !important;
+  object-fit: contain !important;
+  /* Let the image maintain its natural aspect ratio */
 }
+
+/* For favicon, browsers will handle the squishing automatically */
+/* To completely fix this, you would need to create a square version of your logo */
+/* For example: 512x512 pixels with your logo centered on a transparent or colored background */
 
 /* Remove gap at top of projects page */
 .projects body {
