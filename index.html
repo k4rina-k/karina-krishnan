@@ -121,6 +121,7 @@ window.addEventListener('load', function() {
 
 // Scroll-triggered text animation - moves above main content then becomes scrollable
 window.addEventListener('scroll', function() {
+  window.history.pushState('page2', 'Title', '')
   const scrollY = window.pageYOffset;
   const nameText = document.getElementById('scroll-name');
   
