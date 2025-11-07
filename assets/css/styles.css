@@ -1144,6 +1144,12 @@ body {
     background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
 }
 
+/* Ensure the "View My Projects" button on the homepage behaves like other buttons */
+.home .projects-button-container .btn-primary:hover,
+.home .projects-button-container .btn-primary:focus {
+    color: #fff; /* Keep text color white on hover/focus */
+}
+
 /* Projects page header styling with white text and neon effect */
 .projects #header {
   background-color: black !important;
