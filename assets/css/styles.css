@@ -1955,3 +1955,22 @@ img[src*="KK.png"] {
 .v-align-row .carousel {
     height: 100%;
 }
+
+#woodworking-carousel .carousel-inner > .item > img {
+    border-radius: 8px;
+}
+
+#woodworking-carousel .carousel-inner {
+    height: 350px; 
+}
+
+#woodworking-carousel .carousel-inner .item {
+    height: 100%;
+}
+
+#woodworking-carousel .carousel-inner .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
