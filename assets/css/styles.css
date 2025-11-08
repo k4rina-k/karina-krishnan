@@ -1747,230 +1747,32 @@ img[src*="KK.png"] {
         0 0 8px #fff;
 }
 
-/* JCU Image Styling */
-.jcu-section {
-    margin-top: 60px;
+/* YAC Carousel */
+#yac-carousel .carousel-inner {
+    height: 100%;
 }
-
-.jcu-image-container img {
+#yac-carousel .item {
+    height: 100%;
+}
+#yac-carousel .item img {
     width: 100%;
-    border-radius: 8px;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    max-height: 550px; /* Adjust this value to match the LOR image height if needed */
 }
-
-.jcu-text h3 {
-    font-family: Alice, Georgia, serif;
-    font-size: 36px;
-    color: white;
-    text-shadow: 0 0 1px #fff, 0 0 2px #fff;
-    margin-top: 0;
-    text-align: center;
-}
-
-.jcu-text p {
-    font-size: 18px;
-    line-height: 1.7;
-}
-
-/* Flexbox for equal height columns */
-.jcu-section {
+.v-align-row {
     display: flex;
-    flex-wrap: wrap;
     align-items: stretch; /* Make columns equal height */
 }
 
-.jcu-text {
-    display: flex;
-    flex-direction: column;
+.yac-links a {
+    color: white !important;
+    font-family: "Open sans", Helvetica, Arial, sans-serif;
 }
 
-/* Quote Scroller Animation */
-.quote-scroller {
-    flex-grow: 1; /* Allow this container to fill the space */
-    height: 350px; /* Adjust based on desired visible area */
-    overflow: hidden;
-    position: relative;
-    mask-image: linear-gradient(to bottom, transparent, black 20%, black 80%, transparent);
+.yac-links a:hover {
+    color: #ccc !important;
 }
 
-.quote-scroller-inner {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    animation: scroll-up 45s linear infinite;
-}
 
-.quote-scroller-inner p {
-    margin-bottom: 25px; /* Space between quotes */
-}
-
-@keyframes scroll-up {
-    from {
-        transform: translateY(0);
-    }
-    to {
-        transform: translateY(-50%); /* Scrolls exactly one full set of quotes */
-    }
-}
-
-/*
- * Custom styles for research page
- */
-.video-container, .pdf-container {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
-    background: #000;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
-
-.video-container video,
-.pdf-container object {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.pdf-thumbnail {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.pdf-thumbnail a {
-    color: #333;
-    text-decoration: none;
-    display: inline-block;
-}
-
-.pdf-thumbnail a:hover {
-    color: #0056b3;
-    text-decoration: none;
-}
-
-.pdf-thumbnail .fa {
-    color: #d9534f; /* A shade of red for PDF icons */
-}
-
-.pdf-thumbnail p {
-    margin-top: 10px;
-    font-weight: bold;
-}
-
-.pdf-document-container {
-    position: relative;
-    /* Using a 4:3 aspect ratio for documents */
-    padding-bottom: 133.33%; 
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    margin-bottom: 20px;
-}
-
-.pdf-document-container object {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.research-doc-title {
-    font-family: 'Alice', serif;
-    font-weight: normal;
-    font-size: 24px;
-    margin-top: 0;
-    margin-bottom: 15px;
-}
-
-.media-container {
-  position: relative;
-  display: block;
-  overflow: hidden;
-  transition: all 0.3s ease;
-  border-radius: 8px; /* Rounded corners for better glow effect */
-  background-color: black;
-}
-
-.media-container:hover {
-  box-shadow: 
-    0 0 10px #fff,   /* Inner glow */
-    0 0 20px #fff,   /* Medium glow */
-    0 0 30px #fff,   /* Outer glow */
-    0 0 40px #fff;   /* Extended glow */
-  transform: scale(1.02);
-  z-index: 10;
-}
-
-.media-container > * {
-  transition: all 0.5s ease;
-}
-
-.media-container:hover > * {
-  transform: scale(1.05);
-}
-
-.topspace h4 {
-    text-align: center;
-    margin-bottom: 30px;
-    font-weight: bold;
-}
-
-#research-carousel .carousel-inner > .item > img {
-    border-radius: 8px;
-}
-
-#research-carousel .carousel-inner {
-    height: 350px; 
-}
-
-#research-carousel .carousel-inner .item {
-    height: 100%;
-}
-
-#research-carousel .carousel-inner .item img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: center;
-}
-
-.v-align-row {
-    display: flex;
-    align-items: stretch;
-    flex-wrap: wrap;
-}
-
-.v-align-row .col-md-6 {
-    display: flex;
-    flex-direction: column;
-}
-
-.v-align-row .carousel {
-    height: 100%;
-}
-
-#woodworking-carousel .carousel-inner > .item > img {
-    border-radius: 8px;
-}
-
-#woodworking-carousel .carousel-inner {
-    height: 350px; 
-}
-
-#woodworking-carousel .carousel-inner .item {
-    height: 100%;
-}
-
-#woodworking-carousel .carousel-inner .item img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: center;
-}
