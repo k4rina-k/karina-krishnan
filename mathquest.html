@@ -18,6 +18,58 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700">
 	<!-- Custom Styles -->
 	<link rel="stylesheet" href="assets/css/styles.css">
+	<style>
+        .jcu-section {
+            display: flex;
+            align-items: center;
+            margin-top: 60px;
+            background: #1a1a1a;
+            padding: 30px;
+            border-radius: 12px;
+        }
+        .jcu-image-container img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .jcu-text h3 {
+            font-family: Alice, Georgia, serif;
+            font-size: 36px;
+            text-align: center;
+            color: white;
+            text-shadow: 0 0 1px #fff, 0 0 2px #fff;
+            margin-bottom: 20px;
+        }
+        .jcu-text p {
+            text-align: center;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        .quote-scroller {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+        .quote-scroller-inner {
+            position: absolute;
+            width: 100%;
+            animation: scroll-quotes 40s linear infinite;
+        }
+        .quote-scroller p {
+            font-size: 16px;
+            font-style: italic;
+            padding: 10px 0;
+            margin: 0;
+            color: #ccc;
+        }
+        @keyframes scroll-quotes {
+            from {
+                transform: translateY(0);
+            }
+            to {
+                transform: translateY(-50%);
+            }
+        }
+    </style>
 	<!--[if lt IE 9]> <script src="assets/js/html5shiv.js"></script> <![endif]-->
 </head>
 <body class="projects">
@@ -223,7 +275,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 jcu-text">
-                    <h3>FEEDBACK:</h3>
+                    <h3>FEEDBACK</h3>
                     <p class="text-center">4.8/5 Star Rating (75+ Reviews); 55+ parents signed up for math newsletter</p>
                     <div class="quote-scroller">
                         <div class="quote-scroller-inner">
