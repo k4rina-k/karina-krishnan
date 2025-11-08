@@ -26,6 +26,48 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700">
     <!-- Custom Styles -->
     <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        .pdf-document-container-large {
+            position: relative;
+            width: 100%;
+            padding-top: 100%; /* 1:1 aspect ratio, can be adjusted */
+            overflow: hidden;
+        }
+        .pdf-document-container-large object {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .media-container {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .media-container:hover {
+            box-shadow: 
+                0 0 10px #fff,
+                0 0 20px #fff,
+                0 0 30px #fff,
+                0 0 40px #fff;
+            transform: scale(1.02);
+        }
+        .pdf-document-container {
+            position: relative;
+            width: 100%;
+            padding-top: 141.42%; /* A4 paper aspect ratio (sqrt(2):1) */
+            overflow: hidden;
+        }
+        .pdf-document-container object {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+        }
+    </style>
     <!--[if lt IE 9]> <script src="assets/js/html5shiv.js"></script> <![endif]-->
 </head>
 <body class="projects">
@@ -128,6 +170,19 @@ My group developed a comprehensive capstone project that analyzed root causes of
                     <a href="https://shontelbrown.house.gov/media/press-releases/congresswoman-brown-hosts-ceremony-honoring-oh-11-youth-advisory-council" target="_blank">Congresswoman Brown Honors YAC Graduates</a>
                     <br><br>
                     <a href="https://www.legistorm.com/stormfeed/view_rss/2511281/member/3542/title/congresswoman-brown-hosts-ceremony-honoring-oh-11-youth-advisory-council-graduates.html" target="_blank">Legistorm: YAC Ceremony</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="margin-top: 60px;">
+            <div class="col-md-8 col-md-offset-2">
+                <h2 class="timeline-title text-center">White Paper:</h2>
+                <div class="media-container">
+                    <div class="pdf-document-container">
+                        <object data="assets/pdfs/K-12 Ed. Access White Paper.pdf" type="application/pdf">
+                            <p>It appears you don't have a PDF plugin. <a href="assets/pdfs/K-12 Ed. Access White Paper.pdf">Download the PDF</a>.</p>
+                        </object>
+                    </div>
                 </div>
             </div>
         </div>

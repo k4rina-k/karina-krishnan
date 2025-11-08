@@ -26,6 +26,57 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700">
     <!-- Custom Styles -->
     <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        .media-container {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+        .media-container:hover {
+            box-shadow: 
+                0 0 10px #fff,
+                0 0 20px #fff,
+                0 0 30px #fff,
+                0 0 40px #fff;
+            transform: scale(1.02);
+        }
+        .pdf-document-container {
+            position: relative;
+            width: 100%;
+            padding-top: 70.71%; /* A4 paper aspect ratio */
+            overflow: hidden;
+        }
+        .pdf-document-container object {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .media-title {
+            text-align: center;
+            font-family: Alice, Georgia, serif;
+            font-size: 28px;
+            margin-bottom: 15px;
+            text-shadow: 0 0 1px #fff, 0 0 2px #fff;
+        }
+    </style>
     <!--[if lt IE 9]> <script src="assets/js/html5shiv.js"></script> <![endif]-->
 </head>
 <body class="projects">
@@ -57,9 +108,38 @@
                 </header>
 
                 <!-- Woodworking content -->
-				<p> I attended the Summer Science Program's Astrophysics track at Georgia College & State University, a highly selective five-week research program with approximately 15% acceptance rate (588 out of 3,700+ international applications) affiliated with MIT, Caltech, and Harvey Mudd. The program proved to be the most academically challenging experience of my life, requiring 15+ hours daily of rigorous work including advanced lectures in physics, mathematics, and astronomy, completing demanding problem sets, Python programming exercises, and conducting original research. I worked with two teammates to study Mars-crossing asteroid 1990 MA (5066 Garradd), applying advanced techniques in astrometry and photometry to analyze telescope images, calculate precise positional data using the Method of Gauss for orbit determination, and determine the asteroid's orbital properties. We submitted our findings to the Minor Planet Center and produced a comprehensive research paper detailing our methodology, calculations, and scientific conclusions. </p>
+				<p class="large-header-text text-center" style="text-align: center; margin-top: 20px;"> I attended the Summer Science Program's Astrophysics track at Georgia College & State University, a highly selective five-week research program with approximately 15% acceptance rate (588 out of 3,700+ international applications) affiliated with MIT, Caltech, and Harvey Mudd. The program proved to be the most academically challenging experience of my life, requiring 15+ hours daily of rigorous work including advanced lectures in physics, mathematics, and astronomy, completing demanding problem sets, Python programming exercises, and conducting original research. I worked with two teammates to study Mars-crossing asteroid 1990 MA (5066 Garradd), applying advanced techniques in astrometry and photometry to analyze telescope images, calculate precise positional data using the Method of Gauss for orbit determination, and determine the asteroid's orbital properties. We submitted our findings to the Minor Planet Center and produced a comprehensive research paper detailing our methodology, calculations, and scientific conclusions. </p>
 			</article>
             <!-- /Article -->
+
+            <!-- PDF and Video Section -->
+            <div class="row" style="margin-top: 40px;">
+                <!-- PDF Viewer -->
+                <div class="col-md-6">
+                    <h3 class="media-title">Research Paper</h3>
+                    <div class="media-container">
+                        <div class="pdf-document-container">
+                            <object data="assets/pdfs/SSP_Research_Paper.pdf" type="application/pdf">
+                                <p>It appears you don't have a PDF plugin. <a href="assets/pdfs/SSP_Research_Paper.pdf">Download the PDF</a>.</p>
+                            </object>
+                        </div>
+                    </div>
+                </div>
+                <!-- YouTube Video -->
+                <div class="col-md-6">
+                    <h3 class="media-title">My SSP Vlog!</h3>
+                    <div class="media-container">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/Ja5IWKJ2nMQ" title="SSP ASTRO @ GCSU VLOG 2025" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="text-center yac-links" style="margin-top: 30px;">
+                        <a href="https://ssp.org/student-blog/bites-from-the-big-bang/" target="_blank">SSP Student Blog: Bites from the Big Bang</a>
+                        <br><br>
+                        <a href="https://ssp.org/student-blog/aura-you-seeing-this/" target="_blank">SSP Student Blog: Aura You Seeing This?</a>
+                    </div>
+                </div>
+            </div>
             
             <!-- Return to Projects Button -->
             <div class="row" style="margin-top: 60px; margin-bottom: 40px;">
