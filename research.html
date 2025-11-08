@@ -26,6 +26,71 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alice|Open+Sans:400,300,700">
     <!-- Custom Styles -->
     <link rel="stylesheet" href="assets/css/styles.css">
+    <style>
+        .media-container {
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+        .media-container:hover {
+            box-shadow: 
+                0 0 10px #fff,
+                0 0 20px #fff,
+                0 0 30px #fff,
+                0 0 40px #fff;
+            transform: scale(1.02);
+        }
+        .pdf-document-container {
+            position: relative;
+            width: 100%;
+            padding-top: 141.42%; /* A4 paper aspect ratio */
+            overflow: hidden;
+        }
+        .pdf-document-container object {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+        }
+        .pdf-container { /* For the presentation PDF */
+            position: relative;
+            width: 100%;
+            padding-bottom: 75%; /* 4:3 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+        .pdf-container object {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .research-doc-title {
+            font-family: Alice, Georgia, serif;
+            font-size: 28px;
+            margin-bottom: 15px;
+            text-shadow: 0 0 1px #fff, 0 0 2px #fff;
+        }
+    </style>
     <!--[if lt IE 9]> <script src="assets/js/html5shiv.js"></script> <![endif]-->
 </head>
 <body class="projects">
@@ -131,7 +196,7 @@
                 <div class="col-md-6">
                     <div class="media-container">
                         <div class="pdf-container">
-                            <object data="assets/pdfs/research_pptx.pdf" type="application/pdf" width="100%" height="400px">
+                            <object data="assets/pdfs/research_pptx.pdf" type="application/pdf">
                                 <p>It appears you don't have a PDF plugin for this browser. You can <a href="assets/pdfs/research_pptx.pdf">click here to download the PDF file.</a></p>
                             </object>
                         </div>
