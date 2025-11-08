@@ -231,8 +231,8 @@ a:hover {
 }
 #head img.img-circle {
   display: block;
-  width: 180px;
-  height: 180px;
+  width: 140px;
+  height: 140px;
   overflow: hidden;
   border: 9px solid rgba(0, 0, 0, 0.05);
   margin: 0; /* Remove auto margin to stop centering */
@@ -1543,7 +1543,7 @@ img[src*="KK.png"] {
 
 /* Timeline Animation Styles - Fixed positioning */
 .timeline-container {
-  margin: 80px 0;
+  margin: 80px 0 0;
   padding: 0 20px;
 }
 
@@ -1552,7 +1552,7 @@ img[src*="KK.png"] {
   font-size: 48px;
   color: white;
   text-align: center;
-  margin-bottom: 70px;
+  margin-bottom: 20px;
   text-shadow: 0 0 1px #fff, 0 0 2px #fff;
 }
 
@@ -1623,10 +1623,13 @@ img[src*="KK.png"] {
 }
 
 .timeline-content p {
-  color: #ccc;
-  font-size: 16px;
-  line-height: 1.5;
-  margin: 0;
+	margin-top: 10px;
+	font-size: 16px; /* Default font size for timeline text */
+	line-height: 1.6;
+}
+
+.large-header-text {
+	font-size: 22px !important; /* Increased font size for specific timeline entry */
 }
 
 /* Animation keyframes */
@@ -1688,6 +1691,37 @@ img[src*="KK.png"] {
   }
 }
 
+/* Mathquest Carousel */
+#mathquest-carousel {
+    max-width: 800px;
+    margin: 60px auto 0;
+}
+
+#mathquest-carousel .carousel-inner > .item > img {
+    border-radius: 8px;
+}
+
+/* Custom Carousel Controls */
+.carousel-control-style {
+    background-image: none !important;
+    width: auto;
+    opacity: 1;
+    text-shadow: none;
+}
+
+.carousel-control-style .glyphicon {
+    font-size: 30px;
+    color: white;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 1px #fff, 0 0 3px #fff, 0 0 5px #fff;
+}
+
+.carousel-control-style:hover .glyphicon {
+    transform: scale(1.05);
+    color: white;
+    text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #fff, 0 0 8px #fff;
+}
+
 /* Return to Projects button - match the homepage button exactly */
 .projects .btn {
     background: white !important;
@@ -1720,4 +1754,70 @@ img[src*="KK.png"] {
         0 0 4px #fff,
         0 0 6px #fff,
         0 0 8px #fff;
+}
+
+/* JCU Image Styling */
+.jcu-section {
+    margin-top: 60px;
+}
+
+.jcu-image-container img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.jcu-text h3 {
+    font-family: Alice, Georgia, serif;
+    font-size: 36px;
+    color: white;
+    text-shadow: 0 0 1px #fff, 0 0 2px #fff;
+    margin-top: 0;
+    text-align: center;
+}
+
+.jcu-text p {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+/* Flexbox for equal height columns */
+.jcu-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch; /* Make columns equal height */
+}
+
+.jcu-text {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Quote Scroller Animation */
+.quote-scroller {
+    flex-grow: 1; /* Allow this container to fill the space */
+    height: 350px; /* Adjust based on desired visible area */
+    overflow: hidden;
+    position: relative;
+    mask-image: linear-gradient(to bottom, transparent, black 20%, black 80%, transparent);
+}
+
+.quote-scroller-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    animation: scroll-up 45s linear infinite;
+}
+
+.quote-scroller-inner p {
+    margin-bottom: 25px; /* Space between quotes */
+}
+
+@keyframes scroll-up {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-50%); /* Scrolls exactly one full set of quotes */
+    }
 }
