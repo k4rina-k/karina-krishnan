@@ -90,6 +90,19 @@
             margin-bottom: 15px;
             text-shadow: 0 0 1px #fff, 0 0 2px #fff;
         }
+        #research-carousel {
+            height: 450px; /* Set a fixed height for the carousel */
+        }
+        #research-carousel .carousel-inner,
+        #research-carousel .item {
+            height: 100%;
+        }
+        #research-carousel .item img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* Scale down to fit, don't crop */
+            border-radius: 8px;
+        }
     </style>
     <!--[if lt IE 9]> <script src="assets/js/html5shiv.js"></script> <![endif]-->
 </head>
